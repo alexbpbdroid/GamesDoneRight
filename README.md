@@ -1,0 +1,2 @@
+# GamesDoneRight
+gog.com clone
