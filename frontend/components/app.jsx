@@ -2,7 +2,13 @@ import React from "react";
 
 const App = () => (
   <div>
-    <h1>GDR.com</h1>
+    <header>
+      <h1>Bench BnB</h1>
+      <GreetingContainer />
+    </header>
+
+    <Route path="/login" component={LoginFormContainer} />
+    <Route path="/signup" component={SignupFormContainer} />
   </div>
 );
 
