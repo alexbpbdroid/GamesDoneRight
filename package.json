@@ -1,5 +1,43 @@
 {
   "name": "GDR",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "description": "a gog.com clone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode=development",
+    "npmdep": "npm install --save webpack webpack-cli react react-router react-dom react-router-dom redux redux-logger redux-thunk react-redux @babel/core @babel/preset-react @babel/preset-env babel-loader"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexbpbdroid/GamesDoneRight.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexbpbdroid/GamesDoneRight/issues"
+  },
+  "homepage": "https://github.com/alexbpbdroid/GamesDoneRight#readme"
 }
