@@ -52,6 +52,7 @@ group :development do
   gem 'annotate'
   gem 'bcrypt'
   gem 'jquery-rails'
+  gem 'annotate'
 end
 
 group :test do
