@@ -5,6 +5,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script type="text/javascript">window.logoURL="<%= image_url("gog-logo.png")%>"</script>
+    <script type="text/javascript">window.arrowURL="<%= image_url("arrowdown.png")%>"</script>
+    <script type="text/javascript">window.cartURL="<%= image_url("cart-icon.png")%>"</script>
+    <script type="text/javascript">window.searchURL="<%= image_url("search-icon.png")%>"</script>
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
