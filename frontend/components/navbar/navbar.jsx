@@ -20,9 +20,9 @@ const NavBar = ({ currentUser, logout, openModal }) => {
             <Link to="/signup" className="sign-in-link">SIGN IN</Link>&nbsp;<img src={window.arrowURL} className="sign-in-arrow" />
               <div className="dropdown-content" id="sign-in-drop">
                 <nav className="sign-in-drop-buttons">
-                  <button onClick={() => openModal('login')}>CREATE ACCOUNT</button>
+                <button class="modal-btn" id="create-account-button" onClick={() => openModal('signup')}>CREATE ACCOUNT</button>
                   {/* <button class="modal-btn" id="create-account-button">CREATE ACCOUNT</button> */}
-                  <button onClick={() => openModal('signup')}>SIGN IN</button>
+                <button class="modal-btn" id="sign-in-button" onClick={() => openModal('login')}>SIGN IN</button>
                   {/* <button class="modal-btn" id="sign-in-button">SIGN IN</button> */}
 
                 </nav>

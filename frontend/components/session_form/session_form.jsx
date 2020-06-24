@@ -36,6 +36,20 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    let modalHeader;
+    let buttonValue;
+    if (this.props.formType === 'login') {
+      buttonValue = 'LOG IN NOW'
+
+      // modalHeader = {
+      //   <div
+    } 
+    
+    else {
+      buttonValue = 'SIGN UP NOW'
+    }
+    // let modalHeader;
+    
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -60,7 +74,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br />
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <input className="session-submit" type="submit" value={buttonValue} />
           </div>
         </form>
       </div>
