@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Greeting = ({ currentUser, logout, openModal }) => {
+const Navbar = ({ currentUser, logout, openModal }) => {
 
   const sessionLinks = () => (
     <div>
@@ -19,7 +19,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
           <Link to="/">SUPPORT</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
 
           <div className="dropdown">
-            <div>SIGN IN</div>&nbsp;<img src={window.arrowURL} className="sign-in-arrow" />
+            <div className="sign-in-drop-text">SIGN IN </div>
 
             <div className="dropdown-content" id="sign-in-drop">
               <nav className="sign-in-drop-buttons">
@@ -33,9 +33,11 @@ const Greeting = ({ currentUser, logout, openModal }) => {
                 <img src={window.dropGamesURL} />
               </div>
 
-              <p id="gog-description"><strong>GOG.com is a digital distribution platform – an online store with a curated selection of games, an optional gaming client giving you freedom of choice, and a vivid community of gamers.</strong> All of this born from a deeply rooted love for games, utmost care about customers, and a belief that you should own the things you buy.</p>
+              <p id="gog-description"><strong>GDR.com is a digital distribution platform – an online store with a curated selection of games, an optional gaming client giving you freedom of choice, and a vivid community of gamers.</strong> All of this born from a deeply rooted love for games, utmost care about customers, and a belief that you should own the things you buy.</p>
+              <hr id="purple-line"/>
             </div>
           </div>
+          &nbsp;<img src={window.arrowURL} className="sign-in-arrow" />
 
         </div>
 
@@ -48,7 +50,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
 
     </div>
   );
-  const personalGreeting = () => (
+  const personalNavbar = () => (
 
     <div>
       <div className="thin-purple-bar"></div>
@@ -63,15 +65,48 @@ const Greeting = ({ currentUser, logout, openModal }) => {
           <Link to="/">COMMUNITY</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
           <Link to="/">SUPPORT</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
 
-          <div className="dropdown">
-            <Link to="/signup" className="current-user-link">{currentUser.username}</Link>&nbsp;<img src={window.arrowURL} className="sign-in-arrow" />
-            <div className="dropdown-content" id="sign-in-drop">
-              <nav className="user-drop-header">
-                <p>Your Account</p><br />
-                <div>
-                  {currentUser.username}
-                </div>
-              </nav>
+          <div className="user-dropdown">
+            <div className="user-dropdown-link">{currentUser.username}&nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
+            
+            <div className="user-dropdown-content" id="user-menu-drop">
+              <div className="user-drop-header">
+                
+                <img class="profile-circle" src={window.profileURL}></img>
+
+                  <div className="right-account-info">
+
+                    <div className="your-account-text">Your Account</div>
+                    <div className="user-drop-username-text">
+                      {currentUser.username}
+                    </div>
+                  </div>
+                
+              </div>
+
+              <br/>
+              <div className="activity-feed-link">Activity feed</div>
+              <br/>
+              <div className="your-profile-link">Your profile</div>
+              <hr/>
+              <div className="games-link">Games</div>
+              <br />
+              <div className="movies-link">Movies</div>
+              <br />
+              <div className="wishlist-link">Wishlist</div>
+              <br/>
+              <div className="redeem-code-link">Redeem a code</div>
+              <hr/>
+              <div className="friends">Friends</div>
+              <br/>
+              <div className="chat-link">Chat</div>
+              <hr/>
+              <div className="your-wallet-link">Your Wallet</div>
+              <br/>
+              <div className="privacy-settings-link">Privacy and settings</div>
+              <br/>
+              <div className="language-currency-link">Language and currency</div>
+              <hr/>
+              <div className="sign-out-link" onClick={logout}>Sign Out</div>
             </div>
           </div>
 
@@ -83,23 +118,15 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         </div>
 
       </nav>
-
-
-      <hgroup className="header-group">
-        {/* <h2 className="header-name">Hi, {currentUser.username}!</h2> */}
-        <button className="header-button" onClick={logout}>Log Out</button>
-      </hgroup>
-
-      {/* <script src="../modal/modal.js"></script> */}
     </div>
 
   );
 
   return (
     currentUser ?
-    personalGreeting(currentUser, logout) :
+    personalNavbar(currentUser, logout) :
     sessionLinks()
   );
 };
 
-export default Greeting;
+export default Navbar;

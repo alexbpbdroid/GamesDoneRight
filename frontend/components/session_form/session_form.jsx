@@ -36,36 +36,67 @@ class SessionForm extends React.Component {
   }
 
   render() {
+
+    let authText;
+    let authText2;
+    let modalHeader;
+    let modalButtonText;
+
+    if (this.props.formType === 'login') {
+      modalHeader = 'LOG IN'
+      modalButtonText = 'LOG IN NOW'
+      authText = ""
+      authText2 = ""
+    } else {
+      modalHeader = 'SIGN-UP'
+      modalButtonText = 'SIGN UP NOW'
+      authText = "By signing up you acknowledge you are 16 or older and accept "
+      authText2 = "GDR User Agreement & Privacy Policy."
+    }
+
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to BenchBnB!
-          <br/>
-          Please {this.props.formType} or {this.props.otherForm}
-          <div onClick={this.props.closeModal} className="close-x">X</div>
-          {this.renderErrors()}
-          <div className="login-form">
-            <br/>
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
-          </div>
-        </form>
+      <div>
+        <div className="login-form-container">
+          <div onClick={this.props.closeModal} className="close-x">x</div>
+          <nav className="modal-header">
+            <img src={window.logo2URL} className="logo2-icon" />{modalHeader}
+          </nav>
+
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+            
+            {/* <br/>
+            Please {this.props.formType} or {this.props.otherForm} */}
+            {this.renderErrors()}
+            <div className="login-form">
+              <br/>
+              <div className="modal-username-input">
+                <input type="text"
+                  placeholder="Username"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-username"
+                />
+              </div>
+              <br/>
+              <div className="modal-password-input">
+                <input type="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-password"
+                />
+              </div>
+              <p className="auth-text">{authText}<strong>{authText2}</strong></p>
+              <br/>
+            </div>
+              <input className="session-submit" type="submit" value={modalButtonText} />
+          </form>
+          <nav className="bottom-of-modal">
+
+          </nav>
+        </div>
       </div>
+      
     );
   }
 }

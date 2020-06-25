@@ -7,49 +7,106 @@
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   justify-content: center;
-  
+  z-index: 10000;
 }
 
 .modal-child {
-  
-  background-color: #DEDEDE;
+  padding: 0;
+  margin-top: 135px;
+  background-color: #F5F5F5;
   width: 390px;
-  height: 513px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  height: 410px;
+  
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  justify-content: center;
-  
-  
   
 }
 
-/* .modal-background {
-  position: fixed;
+.login-username {
+  
+  margin-left: 30px;
+  width: 320px;
+  height: 40px;
+  border-radius: initial;
+  border: #b1b1b1 solid 1px;
+  font-weight: 50;
+  text-indent: 10px;
+}
+
+.login-password {
+  
+  margin-left: 30px;
+  width: 320px;
+  height: 40px;
+  border-radius: initial;
+  border: #b1b1b1 solid 1px;
+  font-weight: 50;
+  text-indent: 10px;
+}
+
+.login-form {
+  font-family: 'Lato', sans-serif;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-family: 'Lato', sans-serif;
+  color: gray;
+  font-weight: 50;
+}
+
+.bottom-of-modal {
+  
+  margin-top: 43px;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  
   width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s opacity 0,5s;
+  height: 50px;
+  background-color: lightgray;
 }
 
-.bg-active {
-  visibility: visible;
-  opacity: 1;
+.close-x {
+  margin-top: 5px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  color: gray;
 }
 
-.modal-child {
-  background-color: #DEDEDE;
-  width: 390px;
-  height: 513px%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-} */
+.close-x:hover {
+  cursor: pointer;
+}
+
+.logo2-icon {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.session-submit {
+  margin-left: 30px;
+  width: 330px;
+  background: linear-gradient(#9fbf00, #80ab00);
+  background-color: #9fbf00;
+  border-color: #7ca600;
+  height: 40px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  border-radius: 3px;
+  border: #b1b1b1 solid 1px;
+    
+  text-align: center;
+  outline: transparent solid;
+  color: white;
+}
+
+.auth-text {
+  color: gray;
+  margin-left: 35px;
+  margin-right: 35px;
+  font-size: 12px;
+  text-align: center;
+}

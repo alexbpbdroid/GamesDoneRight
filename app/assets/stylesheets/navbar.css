@@ -1,7 +1,7 @@
 .navbar {
   background-color: rgba(26,26,26,0.9);
   margin-top: 0px;
-  height: 50px;
+  height: 52px;
   box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.3)
 }
 
@@ -16,13 +16,7 @@
   float: left;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
-  /* left: 29%; */
-  /* position: relative; */
-  /* top:-5px; */
   color: #d8d8d8;
-  /* height: 53px; */
-  line-height: 35px;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   font-size: 14px;
@@ -57,20 +51,12 @@
   color: #F8B1FE
 }
 
-.current-user-link {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #de8ae5;
-}
-
-.current-user-link:hover {
-  color: #F8B1FE
-}
 
 .dropdown {
   position: relative;
   display: inline-block;
   cursor: default;
+  
 }
 
 .dropdown-content {
@@ -81,7 +67,9 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   /* padding: 12px 16px; */
   z-index: 1;
+  /* top: 20px; */
 }
+
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -94,16 +82,110 @@
   color: gray;
   line-height: normal;
 }
-#user-menu-drop {
-  left: -200px;
-  /* text-align: center; */
-  width: 230px;
-  color: gray;
-  line-height: normal;
+
+.user-dropdown-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #de8ae5;
 }
 
+.user-dropdown-link:hover {
+  color: #F8B1FE
+}
+
+.user-dropdown {
+  
+  position: relative;
+  
+  cursor: default;
+  
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-indent: 10px;
+  color: black;
+  
+}
+
+
+.sign-out-link:hover {
+  cursor: pointer;
+  background-color: lightgray
+}
+
+
+.user-dropdown:hover .user-dropdown-content {
+  display: block;
+}
+
+#purple-line {
+  
+  border: 2px solid #824B9D;
+}
+
+
+#user-menu-drop {
+  height: 478px;
+  left: -75px;
+  /* text-align: center; */
+  width: 230px;
+  color: black;
+  line-height: normal;
+}
+.user-drop-header {
+  /* display: inline-block; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+
+  margin: 0;
+  padding: 0;
+  background-color: #F1F1F1;
+  height: 67px;
+  border-bottom: 1px solid lightgray;
+  color: darkgray
+  
+}
+
+
+.profile-circle {
+  height: 45px;
+  border-radius: 50%;
+  margin-left: -40px;
+}
+
+.your-account-text {
+  
+  margin-bottom: 5px;
+  margin-left: 10px;
+  
+  font-size: 14px;
+  font-weight: 400;
+  color: #9a9a9a;
+}
+
+
+.user-drop-username-text {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #262626;
+  text-transform: uppercase;
+}
+
+
+
 #gog-description {
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
   line-height: 1.75;
   font-family: 'Lato', sans-serif;
   color: #4c4c4c;
@@ -117,10 +199,9 @@
 }
 
 .logo-icon { 
-  height: 42px;
-  padding-top: 9px;
-  padding-right: 45px;
-  vertical-align: -5px; 
+  height: 40px;
+  padding-top: 6px;
+  padding-right: 45px
 }
 
 .arrow-icon {
@@ -140,25 +221,18 @@
 }
 
 .cart-icon {
-  padding-top: 10px;
+  padding-top: 13px;
   padding-right: 35px;
-  height: 35px;
+  height: 25px;
 }
 
 .search-icon {
-  padding-top: 10px;
-  height: 35px; 
+  padding-top: 13px;
+  
+  height: 25px; 
 }
 
 .sign-in-drop-buttons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #F2F2F2;
-  height: 70px;
-  border-bottom: 1px solid lightgray;
-}
-.user-drop-header {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -191,3 +265,13 @@
 #sign-in-button:hover {
   background-color: #713B8D
 }
+
+.sign-in-drop-text {
+  color: #de8ae5;
+  
+}
+
+.sign-in-drop-text:hover {
+  color: #F8B1FE
+}
+

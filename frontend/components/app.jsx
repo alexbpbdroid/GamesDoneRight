@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 import Modal from './modal/modal';
-import GreetingContainer from './greeting/greeting_container';
+import NavbarContainer from './navbar/navbar_container';
 import LoginFormContainer from './session_form/login_form_container.jsx';
 import SignupFormContainer from './session_form/signup_form_container.jsx';
 
@@ -19,7 +19,7 @@ const App = () => (
   <div>
     <Modal />
     <header>
-      <GreetingContainer />
+      <NavbarContainer />
     </header>
     <Switch>
       
