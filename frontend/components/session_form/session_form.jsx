@@ -40,20 +40,17 @@ class SessionForm extends React.Component {
     let buttonValue;
     if (this.props.formType === 'login') {
       buttonValue = 'LOG IN NOW'
-
-      // modalHeader = {
-      //   <div
-    } 
-    
-    else {
+      modalHeader = 'SIGN-UP' 
+    } else {
       buttonValue = 'SIGN UP NOW'
+      modalHeader = 'LOG IN'
     }
-    // let modalHeader;
+    
     
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          
+          {modalHeader}
           <div onClick={this.props.closeModal} className="close-x">X</div>
           {this.renderErrors()}
           <div className="login-form">
