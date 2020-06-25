@@ -1,5 +1,4 @@
 class Api::SessionsController < ApplicationController
-
   def create
     @user = User.find_by_credentials(
       params[:user][:username],
@@ -23,5 +22,4 @@ class Api::SessionsController < ApplicationController
       render json: ["Nobody signed in"], status: 404
     end
   end
-
 end

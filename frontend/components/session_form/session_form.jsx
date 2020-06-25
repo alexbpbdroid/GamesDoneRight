@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    return (
+    return(
       <ul>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
@@ -36,25 +36,16 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    let modalHeader;
-    let buttonValue;
-    if (this.props.formType === 'login') {
-      buttonValue = 'LOG IN NOW'
-      modalHeader = 'SIGN-UP' 
-    } else {
-      buttonValue = 'SIGN UP NOW'
-      modalHeader = 'LOG IN'
-    }
-    
-    
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          {modalHeader}
+          Welcome to BenchBnB!
+          <br/>
+          Please {this.props.formType} or {this.props.otherForm}
           <div onClick={this.props.closeModal} className="close-x">X</div>
           {this.renderErrors()}
           <div className="login-form">
-            <br />
+            <br/>
             <label>Username:
               <input type="text"
                 value={this.state.username}
@@ -62,7 +53,7 @@ class SessionForm extends React.Component {
                 className="login-input"
               />
             </label>
-            <br />
+            <br/>
             <label>Password:
               <input type="password"
                 value={this.state.password}
@@ -70,8 +61,8 @@ class SessionForm extends React.Component {
                 className="login-input"
               />
             </label>
-            <br />
-            <input className="session-submit" type="submit" value={buttonValue} />
+            <br/>
+            <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
       </div>
