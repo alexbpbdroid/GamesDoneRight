@@ -9,12 +9,11 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoUser = this.handleDemoUser.bind(this);
   }
 
   update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+    return e => this.setState({[field]: e.currentTarget.value});
   }
 
   handleSubmit(e) {
@@ -23,8 +22,16 @@ class SessionForm extends React.Component {
     this.props.processForm(user).then(this.props.closeModal);
   }
 
+  handleDemoUser(e) {
+    e.preventDefault();
+    this.props.login({
+      username: "demouser",
+      password: "password"
+    }).then(this.props.closeModal)
+  }
+
   renderErrors() {
-    return(
+    return (
       <ul>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
@@ -53,7 +60,7 @@ class SessionForm extends React.Component {
       authText = "By signing up you acknowledge you are 16 or older and accept "
       authText2 = "GDR User Agreement & Privacy Policy."
     }
-
+    
     return (
       <div>
         <div className="login-form-container">
@@ -63,40 +70,47 @@ class SessionForm extends React.Component {
           </nav>
 
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            
-            {/* <br/>
-            Please {this.props.formType} or {this.props.otherForm} */}
-            {this.renderErrors()}
+
             <div className="login-form">
-              <br/>
+              <br />
               <div className="modal-username-input">
                 <input type="text"
                   placeholder="Username"
                   value={this.state.username}
                   onChange={this.update('username')}
                   className="login-username"
-                />
+                  />
               </div>
-              <br/>
+              <br />
               <div className="modal-password-input">
                 <input type="password"
                   placeholder="Password"
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="login-password"
-                />
+                  />
               </div>
+              
               <p className="auth-text">{authText}<strong>{authText2}</strong></p>
               <br/>
+              
             </div>
+            <div>
               <input className="session-submit" type="submit" value={modalButtonText} />
+
+            </div>
+            <br/>
+            <div>
+              <button type="button" className="modal-demo-user-button" onClick={this.handleDemoUser}>DEMO LOGIN</button>
+
+            </div>
           </form>
           <nav className="bottom-of-modal">
-
+             {this.renderErrors()}
           </nav>
         </div>
       </div>
-      
+
     );
   }
 }

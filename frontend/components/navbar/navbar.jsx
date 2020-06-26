@@ -23,10 +23,10 @@ const Navbar = ({ currentUser, logout, openModal }) => {
 
             <div className="dropdown-content" id="sign-in-drop">
               <nav className="sign-in-drop-buttons">
-                <button class="modal-btn" id="create-account-button" onClick={() => openModal('signup')}>CREATE ACCOUNT</button>
-                {/* <button class="modal-btn" id="create-account-button">CREATE ACCOUNT</button> */}
-                <button class="modal-btn" id="sign-in-button" onClick={() => openModal('login')}>SIGN IN</button>
-                {/* <button class="modal-btn" id="sign-in-button">SIGN IN</button> */}
+                <button className="modal-btn" id="create-account-button" onClick={() => openModal('signup')}>CREATE ACCOUNT</button>
+                
+                <button className="modal-btn" id="sign-in-button" onClick={() => openModal('login')}>SIGN IN</button>
+                
 
               </nav>
               <div className="dropGames">
