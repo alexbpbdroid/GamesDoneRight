@@ -7,6 +7,7 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
+import Slider from "./slider/slider"
 
 import Modal from './modal/modal';
 import NavbarContainer from './navbar/navbar_container';
@@ -21,9 +22,7 @@ const App = () => (
     <header>
       <NavbarContainer />
     </header>
-    <Switch>
-      
-    </Switch>
+      <Slider />
   </div>
 );
 
