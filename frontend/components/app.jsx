@@ -18,11 +18,13 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    <Modal />
-    <header>
-      <NavbarContainer />
-    </header>
-      <Slider />
+      <Modal />
+      <header>
+        <NavbarContainer />
+      </header>
+      <div>
+        <Slider />
+      </div>
   </div>
 );
 
