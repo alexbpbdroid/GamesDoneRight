@@ -23,6 +23,10 @@ function Slider() {
   
 
   return (
+    <div className="outer-slider-container">
+      <button id="goLeft"  onClick={goLeft}>
+        <i class="fa fa-chevron-circle-left"></i>
+      </button>
       <div className="slider">  
         {
         sliderArr.map((item, index) => {
@@ -32,13 +36,11 @@ function Slider() {
               </div>
             );
         })}
-        <button id="goLeft"  onClick={goLeft}>
-          <i class="fa fa-chevron-circle-left"></i>
-        </button>
-        <button id="goRight"  onClick={goRight}>
-          <i class="fa fa-chevron-circle-right"></i>
-        </button>
       </div>
+      <button id="goRight"  onClick={goRight}>
+        <i class="fa fa-chevron-circle-right"></i>
+      </button>
+    </div>
   ); 
 }
 
