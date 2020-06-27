@@ -22,9 +22,9 @@ const App = () => (
     <header>
       <NavbarContainer />
     </header>
-    <div>
-      <Slider />
-    </div>
+    
+    <Slider />
+  
   </div>
 );
 

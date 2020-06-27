@@ -1,8 +1,7 @@
 .outer-slider-container {
   width: 100%;
-  
   display: flex;
-  // justify-content: start;
+  justify-content: center;
   align-items: center;
   margin-top: 100px;
   box-sizing: border-box;
@@ -29,22 +28,28 @@
   // height: 100%;
   transition: 0.5s;
   overflow: hidden;
+  // margin-left: 50px;
+  // margin-right: 50px;
+  // width: 1275px;
+  // height: 80%;
+  // transition: 0.5s;
+  // overflow: hidden;
 }
 
 %btn-styles {
   // position: absolute;
-  margin: 0 auto;
+  // margin: 0;
   // top: 50%;
   transform: translateY(-50%);
-  // width: 10%;
-  // height: 80%;
+  // width: 20px;
+  // height: 20px;
   background: none;
   border: none;
   outline: none;
   transition: 0.5s;
   i{
     font-size: 48px;
-    color: black;
+    color: #808080;
   }
   &:hover{
     // background: rgba(0,0,0, 0.356);

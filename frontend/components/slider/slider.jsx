@@ -25,7 +25,7 @@ function Slider() {
   return (
     <div className="outer-slider-container">
       <button id="goLeft"  onClick={goLeft}>
-        <i class="fa fa-chevron-circle-left"></i>
+        <i className="fa fa-chevron-circle-left"></i>
       </button>
       <div className="slider">  
         {
@@ -38,7 +38,7 @@ function Slider() {
         })}
       </div>
       <button id="goRight"  onClick={goRight}>
-        <i class="fa fa-chevron-circle-right"></i>
+        <i className="fa fa-chevron-circle-right"></i>
       </button>
     </div>
   ); 
