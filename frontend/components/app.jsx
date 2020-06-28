@@ -7,7 +7,8 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
-import Slider from "./slider/slider"
+import StorefrontContainer from './storefront/storefront_container'
+import GameShowContainer from './game_show/game_show_container'
 
 import Modal from './modal/modal';
 import NavbarContainer from './navbar/navbar_container';
@@ -15,6 +16,7 @@ import LoginFormContainer from './session_form/login_form_container.jsx';
 import SignupFormContainer from './session_form/signup_form_container.jsx';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import storefront_container from './storefront/storefront_container';
 
 const App = () => (
   <div>
@@ -22,9 +24,10 @@ const App = () => (
     <header>
       <NavbarContainer />
     </header>
-    
-    <Slider />
-  
+    <Switch>
+      <Route path="/games/:gameId" component={GameShowContainer} />
+      <Route exact path="/" component={StorefrontContainer} />
+    </Switch>
   </div>
 );
 
