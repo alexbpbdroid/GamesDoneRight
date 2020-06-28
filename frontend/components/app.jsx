@@ -16,7 +16,7 @@ import LoginFormContainer from './session_form/login_form_container.jsx';
 import SignupFormContainer from './session_form/signup_form_container.jsx';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import storefront_container from './storefront/storefront_container';
+
 
 const App = () => (
   <div>
@@ -28,6 +28,7 @@ const App = () => (
       <Route path="/games/:gameId" component={GameShowContainer} />
       <Route exact path="/" component={StorefrontContainer} />
     </Switch>
+    
   </div>
 );
 

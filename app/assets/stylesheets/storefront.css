@@ -1,0 +1,66 @@
+.gamers-text {
+  height: 50px;
+  font-size: 14px;
+  margin-top: 50px;
+  border-top: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gamers-text-span {
+  color: purple;
+  font-weight: bold;
+}
+
+.whats-new-text {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testing-text {
+  width: 1275px;
+  font-family: 'Lato', sans-serif;
+  border-bottom: 1px solid rgb(190, 190, 190)
+}
+
+.new-slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.whats-new-slider {
+  width: 1275px;
+  height: 245px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.discover-games-outer {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 1275px; */
+  
+}
+
+.discover-games-inner {
+  width: 1275px;
+  font-family: 'Lato', sans-serif;
+  border-bottom: 1px solid rgb(190, 190, 190)
+}
+
+.store-footer {
+  background-color: black;
+  height: 30px;
+}

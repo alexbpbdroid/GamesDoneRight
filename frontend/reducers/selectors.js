@@ -7,9 +7,6 @@
 //   return {};
 // };
 
-
-
-
 export const selectGame = ({ games }, id) => {
   if (games[id]) {
     const game = games[id];
