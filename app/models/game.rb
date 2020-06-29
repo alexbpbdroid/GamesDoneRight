@@ -16,3 +16,15 @@ class Game < ApplicationRecord
   has_many_attached :photos
   
 end
+
+
+#     t.string "title", null: false
+#     t.datetime "created_at", null: false
+#     t.datetime "updated_at", null: false
+#     t.integer "price", default: 0
+#     t.text "description"
+#     t.string "release_date"
+#     t.string "developer"
+#     t.string "publisher"
+#     t.string "esrb_rating"
+#     t.integer "index"

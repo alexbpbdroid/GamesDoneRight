@@ -1,15 +1,13 @@
 class Api::GamesController < ApplicationController
 
+  def index
+    @games = Game.all
+    render :index
+  end
+
   def show
     @game = Game.find(params[:id])
   end
-
-  # def index
-  #   @games = {}
-  #   Game.with_attached_photos.all.each do |game|
-      
-  #   end
-  # end
 
   private
 
