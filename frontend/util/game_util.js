@@ -1,14 +1,14 @@
 export const fetchGames = data => (
   $.ajax({
     method: 'GET',
-    url: 'api/games',
+    url: '/api/games',
     data
   })
 )
 
-export const fetchGame = id => (
+export const fetchGame = gameId => (
   $.ajax({
     method: 'GET',
-    url: `api/games/${id}`
+    url: `/api/games/${gameId}`
   })
 )

@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
-import games from './games_reducer'
+import reviewsReducer from './reviews_reducer'
+import usersReducer from './users_reducer'
 
-export default combineReducers({
-  games
-});
+const entitiesReducer = combineReducers({
+  users: usersReducer,
+  reviews: reviewsReducer
+})
+
+export default entitiesReducer

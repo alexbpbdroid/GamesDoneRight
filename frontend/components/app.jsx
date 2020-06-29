@@ -1,5 +1,5 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
 import {
   Route,
   Redirect,
@@ -8,7 +8,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 import StorefrontContainer from './storefront/storefront_container'
-import GameShowContainer from './game_show/game_show_container'
+import GamePage from './game/game_container'
 
 import Modal from './modal/modal';
 import NavbarContainer from './navbar/navbar_container';
@@ -21,12 +21,14 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <Modal />
+
     <header>
       <NavbarContainer />
     </header>
+
     <Switch>
-      <Route path="/games/:gameId" component={GameShowContainer} />
       <Route exact path="/" component={StorefrontContainer} />
+      <Route path="/games/:gameId" component={GamePage} />
     </Switch>
     
   </div>

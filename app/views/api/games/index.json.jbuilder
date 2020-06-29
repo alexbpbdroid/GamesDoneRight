@@ -1,5 +1,6 @@
 @games.each do |game|
   json.set! game.id do
-    json.partial! 'game', game: game
+    json.extract! game, :id, :title, :price, :description, :release_date, 
+                        :developer, :publisher, :esrb_rating
   end
 end

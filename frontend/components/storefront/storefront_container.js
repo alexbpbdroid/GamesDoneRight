@@ -1,13 +1,13 @@
 import {connect} from 'react-redux';
-import { asArray } from '../../reducers/selectors'
 import Storefront from './storefront';
+import { fetchGame, fetchGames } from '../../util/game_util';
 
-const mapStateToProps = state => ({
-  games: asArray(state.entities),
+const mapStateToProps = ({games}) => ({
+  games: Object.values(games)
 })
 
 const mapDispatchToProps = dispatch => ({
-
+  fetchGames: () => dispatch(fetchGames())
 });
 
 export default connect(

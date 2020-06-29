@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 
 const Navbar = ({ currentUser, logout, openModal }) => {
-
   const sessionLinks = () => (
     <div>
       <div className="thin-purple-bar"></div>
@@ -125,7 +124,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
 
   return (
     currentUser ?
-    personalNavbar(currentUser, logout) :
+    personalNavbar() :
     sessionLinks()
   );
 };

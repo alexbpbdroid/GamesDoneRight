@@ -1,21 +1,34 @@
-import * as APIUtil from '../util/game_api_util'
+import * as GameApiUtil from '../util/game_util'
 
-export const RECEIVE_GAMES = 'RECEIVE_GAMES';
-export const RECEIVE_GAME = 'RECEIVE_GAME'
-// export const RECEIVE_REVIEW = 'RECEIVE_REVIEW'
+export const RECEIVE_ALL_GAMES = 'RECEIVE_ALL_GAMES';
+export const RECEIVE_GAME = 'RECEIVE_GAME';
+export const RECEIVE_GAME_ERRORS = 'RECEIVE_GAME_ERRORS'
 
-export const receiveGames = ({games}) => ({
-  type: RECEIVE_GAMES,
+export const receiveAllGames = (games) => ({
+  type: RECEIVE_ALL_GAMES,
   games
 })
 
-export const receiveGame = ({game}) => ({
+export const receiveGame = game => ({
   type: RECEIVE_GAME,
   game
 })
 
-export const fetchGame = id => dispatch => (
-  APIUtil.fetchGame(id).then(payload => (
-    dispatch(receiveGame(payload))
-  ))
+const receiveGameErrors = errors => ({
+  type: RECEIVE_GAME_ERRORS,
+  errors
+})
+
+export const fetchGames = () => dispatch => (
+  GameApiUtil.fetchGames()
+    .then(games => (dispatch(receiveAllGames(games))), err => (
+      dispatch(receiveGameErrors(err.responseJson))
+    ))
+)
+
+export const fetchGame = (gameId) => dispatch => (
+  GameApiUtil.fetchGame(gameId)
+    .then(game => (dispatch(receiveGame(game))), err =>
+      dispatch(receiveGameErrors(err.responseJson))
+    )
 )

@@ -1,3 +1,2 @@
-json.game do
-  json.partial! '/api/games/game', game: @game
-end
+json.extract! @game, :id, :title, :price, :description, :release_date, 
+:developer, :publisher, :esrb_rating
