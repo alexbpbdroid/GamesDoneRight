@@ -32,7 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .whats-new-slider {
@@ -42,7 +42,7 @@
   align-items: center;
   justify-content: center;
   background-color: gray;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
 }
 
 .discover-games-outer {
@@ -60,7 +60,20 @@
   border-bottom: 1px solid rgb(190, 190, 190)
 }
 
-.store-footer {
-  background-color: black;
-  height: 30px;
+.discover-games-placeholder {
+  width: 1275px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
 }
+
+.discover-games-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+

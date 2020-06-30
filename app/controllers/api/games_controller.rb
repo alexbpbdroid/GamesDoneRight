@@ -6,12 +6,17 @@ class Api::GamesController < ApplicationController
   end
 
   def show
-    @game = Game.find(params[:id])
+    @game = Game.with_attached_photos.find_by(id: params[:id])
+    if @game
+      render :show
+    else
+      render json: ['Game not found'], status: 404
+    end
   end
 
   private
 
   def game_params
-    params.require(:game).permit(:title, :price, :description, :release_date, :developer, :publisher, :esrb_rating)
+    params.require(:game).permit(:title, :price, :description, :release_date, :developer, :publisher, :esrb_rating, :works_on)
   end
 end

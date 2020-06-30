@@ -7,11 +7,17 @@ function Slider() {
   
 
   let sliderArr = [
-    <ImgComp src={window.img1} />,
-    <ImgComp src={window.img2} />,
-    <ImgComp src={window.img3} />,
-    <ImgComp src={window.img4} />,
-    <ImgComp src={window.img5} />
+    <a href="/#/games/1">
+      <div className='bg1'>
+    
+      </div>
+    </a>,
+     
+    <div className='bg2' />,
+    <div className='bg3' />,
+    <div className='bg4' />,
+    <div className='bg5' />,
+    <div className='bg6' />
   ]
   
   const goLeft = () => {

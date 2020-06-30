@@ -10,7 +10,4 @@ const mapDispatchToProps = dispatch => ({
   fetchGame: (gameId) => dispatch(fetchGame(gameId))
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(GamePage);
+export default connect(mapStateToProps, mapDispatchToProps)(GamePage);

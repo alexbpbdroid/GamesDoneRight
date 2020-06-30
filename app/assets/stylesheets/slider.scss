@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 15px;
   box-sizing: border-box;
 }
 
@@ -19,7 +19,7 @@
   border: 1px solid darkgray;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
 }
 
 .slide {
@@ -70,4 +70,41 @@
 #goRight {
   right: 0;
   @extend %btn-styles;
+}
+
+.bg1 {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/Cyberpunk/cyber-store-carousel.jpg");
+
+}
+
+.bg2 {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/warcraft-store-carousel.jpg");
+}
+
+.bg3 {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/worms-store-carousel.jpg");
+}
+
+.bg4 {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/spongebob-store-carousel.jpg");
+}
+
+.bg5 {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/desperados-store-carousel.jpg");
+}
+
+.bg6 {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/dungeons-store-carousel.jpg")
 }

@@ -7,6 +7,7 @@ function ImgComp({src}) {
     height: "auto"
     
   }
+  // return (<div />)
   return <img src={src} alt="slide-img" style={imgStyles}></img>
 }
 
