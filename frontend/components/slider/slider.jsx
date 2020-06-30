@@ -9,14 +9,16 @@ function Slider() {
   let sliderArr = [
     <a href="/#/games/1">
       <div className='bg1'>
-    
       </div>
     </a>,
      
     <div className='bg2' />,
     <div className='bg3' />,
     <div className='bg4' />,
-    <div className='bg5' />,
+    <a href="/#/games/2">
+      <div className='bg5'>
+      </div>
+    </a>,
     <div className='bg6' />
   ]
   

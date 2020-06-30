@@ -11,7 +11,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         <div className="centered-nav">
           <div className="middle-navbar-links">
 
-            <Link to="/"><img src={window.logoURL} className="logo-icon" /></Link>
+            <Link to="/"><img id="gdr-small-logo" src="https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/icons/gdr-logo.png" className="logo-icon" /></Link>
             <Link to="/">STORE</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
             <Link to="/">ABOUT</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
             <Link to="/">COMMUNITY</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
@@ -23,10 +23,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
               <div className="dropdown-content" id="sign-in-drop">
                 <nav className="sign-in-drop-buttons">
                   <button className="modal-btn" id="create-account-button" onClick={() => openModal('signup')}>CREATE ACCOUNT</button>
-                  
                   <button className="modal-btn" id="sign-in-button" onClick={() => openModal('login')}>SIGN IN</button>
-                  
-
                 </nav>
                 <div className="dropGames">
                   <img src={window.dropGamesURL} />

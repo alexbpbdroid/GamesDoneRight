@@ -1,5 +1,6 @@
 .show-page-header {
-  height: 683px;
+  height: 669px;
+  border-bottom: 1px solid black;
 }
 
 .show-content-outer {
@@ -44,16 +45,20 @@ ul {
   margin: 0;
   padding: 0;
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 2.5;
 }
 
 .description-text {
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 13px;
 }
 
 #play-button-img {
   height: 200px;
+}
+
+#play-button-img:hover {
+  cursor: pointer;
 }
 
 .play-button-container {
@@ -69,10 +74,6 @@ ul {
   align-items: center;
 }
 
-#game-logo-img {
-  height: 150px;
-}
-
 .game-title-outer {
   display: flex;
   align-items: center;
@@ -81,4 +82,16 @@ ul {
 
 .game-title-text {
   width: 1096px;
+}
+
+.details-container {
+  display: flex;
+}
+
+.labels-container {
+  color: rgb(100, 100, 100)
+}
+
+.values-container {
+  margin-left: 30px;
 }

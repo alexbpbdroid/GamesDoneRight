@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+// import { openModal } from '../../actions/modal_actions'
 import GameDetail from './game_detail';
 import { ProtectedRoute } from '../../util/route_util';
 
@@ -33,13 +33,15 @@ class GamePage extends React.Component {
         <div className="show-header-outer" style={styles.headerContainer}>
           <div className="show-page-header">
             <div className="play-button-container">
-              <img id="play-button-img" src="https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/icons/play-video-button.png"/>
+              
+              <img id="play-button-img" src="https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/icons/play-video-button.png" onClick={() => this.props.openModal('video')}/>
             </div>
             <div className="game-logo-container">
               <img id="game-logo-img" src={game.photoUrls[1]} />
             </div>
           </div>
         </div>
+        <br/>
 
         <div className="game-title-outer">
           <div className="game-title-text">
@@ -48,8 +50,6 @@ class GamePage extends React.Component {
         </div>
 
         <div className="show-page-container">
-          
-
           <div className="show-content-outer">
             <div className="show-content-container"> 
               <div className="left-side-content">
@@ -78,13 +78,27 @@ class GamePage extends React.Component {
                 Game Details
                 <hr/>
                 <br/>
-                <ul>
-                  <li>Release Date: {game.release_date}</li>
-                  <li>Works On: {game.works_on}</li>
-                  <li>Publisher: {game.publisher}</li>
-                  <li>Developer: {game.developer}</li>
-                  <li>ESRB: {game.esrb_rating}</li>
-                </ul>
+                <div className="details-container">
+                  <div className="labels-container">
+                    <ul>
+                      <li>Release Date:</li>
+                      <li>Works On:</li>
+                      <li>Publisher:</li>
+                      <li>Developer:</li>
+                      <li>ESRB:</li>
+                    </ul>
+                  </div>     
+                  <div className="values-container">
+                    <ul>
+                      <li>{game.release_date}</li>
+                      <li>{game.works_on}</li>
+                      <li>{game.publisher}</li>
+                      <li>{game.developer}</li>
+                      <li>{game.esrb_rating}</li>
+                    </ul>
+                  </div>
+                </div>
+                <hr/>
               </div>            
             </div>
           </div> 

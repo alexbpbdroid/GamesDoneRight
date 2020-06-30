@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_30_035210) do
+ActiveRecord::Schema.define(version: 2020_06_30_185116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,8 +46,8 @@ ActiveRecord::Schema.define(version: 2020_06_30_035210) do
     t.string "developer"
     t.string "publisher"
     t.string "esrb_rating"
-    t.integer "index"
     t.string "works_on"
+    t.string "video"
     t.index ["title"], name: "index_games_on_title"
   end
 

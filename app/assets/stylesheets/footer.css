@@ -25,9 +25,8 @@
 
 .upper-footer-content {
   height: 100%;
-  width: 1275px;
+  width: 1096px;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -44,9 +43,8 @@
 
 .middle-footer-content {
   height: 100%;
-  width: 1275px;
+  width: 1096px;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -60,8 +58,12 @@
 
 .bottom-footer-content {
   height: 100%;
-  width: 1275px;
+  width: 1096px;
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+#middle-footer-icon {
+    border-radius: 5px;
+    height: 50px;
 }

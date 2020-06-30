@@ -10,8 +10,7 @@ const rootReducer = combineReducers({
   entities,
   session,
   errors,
-  modal,
-  games
+  modal
 });
 
 export default rootReducer;

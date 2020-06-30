@@ -150,8 +150,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
-
   margin: 0;
   padding: 0;
   background-color: #F1F1F1;
@@ -205,8 +203,7 @@
 
 .logo-icon { 
   height: 40px;
-  padding-top: 6px;
-  padding-right: 45px
+  
 }
 
 .arrow-icon {
@@ -221,7 +218,7 @@
 }
 
 .cart-search {
-  margin-top: 8px;
+  margin-top: 50px;
   float: right;
   align-items: center;
 }
@@ -276,5 +273,10 @@
 
 .sign-in-drop-text:hover {
   color: #F8B1FE
+}
+
+#gdr-small-logo {
+  border-radius: 4px;
+  margin: 45px;
 }
 
