@@ -1,0 +1,48 @@
+.price-box {
+  position: absolute;
+  /* right: 16px; */
+  /* bottom: 0; */
+  z-index: 50;
+  width: 390px;
+  height: 123px;
+  padding: 24px 20px;
+  padding-top: 16px;
+  background-color: #e9e9e9;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+  top: 600px;
+  font-size: 32px;
+  letter-spacing: 0;
+}
+
+.price-box-outer {
+  width: 1096px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.price-box-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-purchase-button {
+  width: 395px;
+  height: 45px;
+  border: 1px solid #96bd27;
+  border-bottom-color: #69941b;
+  border-left-color: #7fa721;
+  border-right-color: #7fa721;
+  color: #fff;
+  background-image: linear-gradient(-180deg,#9fbf00,#80ab00 91%);
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wishlist-text {
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

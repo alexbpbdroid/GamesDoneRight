@@ -1,18 +1,15 @@
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(26,26,26,0.9);
-  margin-top: 0px;
-  height: 52px;
-  box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.3)
+    display: flex;
+    justify-content: center;
+    background-color: rgba(26,26,26,0.9);
+    margin-top: 0px;
+    height: 52px;
+    box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.3);
   
 }
 .centered-nav {
   width: 1096px;
-  
   align-items: center;
-  
 }
 .thin-purple-bar {
   background-image: url("bg.jpg");
@@ -218,9 +215,9 @@
 }
 
 .cart-search {
-  margin-top: 50px;
+  margin-top: 10px;
   float: right;
-  align-items: center;
+  
 }
 
 .cart-icon {
@@ -268,6 +265,9 @@
 
 .sign-in-drop-text {
   color: #de8ae5;
+  height: 52px;
+  display: flex;
+  align-items: center;
   
 }
 
@@ -277,6 +277,6 @@
 
 #gdr-small-logo {
   border-radius: 4px;
-  margin: 45px;
+  margin-right: 45px;
 }
 

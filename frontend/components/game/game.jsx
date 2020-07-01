@@ -31,39 +31,41 @@ class GamePage extends React.Component {
     return (
       <>
         <div className="show-header-outer" style={styles.headerContainer}>
-          <div className="show-page-header">
-            <div className="play-button-container">
+          <div className="play-button-container">
+            <img id="play-button-img" src="https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/icons/play-video-button.png" onClick={() => this.props.openModal('video')}/>
+          </div>
+        </div>
+        <div className="price-box-wrapper">
+          <div className="price-box-outer">
+            <div className="price-box">
+              ${game.price}
+              <br/>
+              <button class="big-purchase-button">Add to cart</button>
               
-              <img id="play-button-img" src="https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/icons/play-video-button.png" onClick={() => this.props.openModal('video')}/>
-            </div>
-            <div className="game-logo-container">
-              <img id="game-logo-img" src={game.photoUrls[1]} />
+              <center className="wishlist-text">Wishlist it</center>
             </div>
           </div>
         </div>
         <br/>
-
         <div className="game-title-outer">
           <div className="game-title-text">
             <h1>{game.title}</h1>
           </div>
         </div>
-
         <div className="show-page-container">
           <div className="show-content-outer">
             <div className="show-content-container"> 
               <div className="left-side-content">
                 Description
                 <hr />
-                <br/>
                 <div className="game-description-image">
-                  <img src={game.photoUrls[2]} />
+                  <img src={game.photoUrls[1]} />
                 </div>
                 <br/>
                 <hr/>
                 <br/>
                 <div className="description-text">
-                  <strong>{game.title}&nbsp;</strong>{game.description}
+                  {game.description}
                 </div> 
               </div>
               <div className="right-side-content">
@@ -101,7 +103,13 @@ class GamePage extends React.Component {
                 <hr/>
               </div>            
             </div>
+            
           </div> 
+          <div className="reviews-container">
+            <div className="reviews-inner">User reviews
+              <hr/>
+            </div>
+          </div>
         </div>
     </>
     )

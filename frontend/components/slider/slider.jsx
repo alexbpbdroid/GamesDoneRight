@@ -12,14 +12,25 @@ function Slider() {
       </div>
     </a>,
      
-    <div className='bg2' />,
-    <div className='bg3' />,
-    <div className='bg4' />,
     <a href="/#/games/2">
-      <div className='bg5'>
+      <div className='bg2'>
       </div>
     </a>,
-    <div className='bg6' />
+
+    <a href="/#/games/3">
+      <div className='bg3'>
+      </div>
+    </a>,
+
+    <a href="/#/games/4">
+      <div className='bg4'>
+      </div>
+    </a>,
+
+    <a href="/#/games/5">
+      <div className='bg5'>
+      </div>
+    </a>
   ]
   
   const goLeft = () => {

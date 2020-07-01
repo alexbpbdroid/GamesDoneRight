@@ -9,6 +9,8 @@ function Modal({modal, closeModal}) {
   if (!modal) {
     return null;
   }
+
+  let video = false;
   let component;
   switch (modal) {
     case 'login':
@@ -19,18 +21,30 @@ function Modal({modal, closeModal}) {
       break;
     case 'video':
       component = <VideoContainer />;
+      video = true;
       break;
     default:
       return null;
   }
-  return (
-    <div className="modal-background" id="video-background" onClick={closeModal}>
-      <div className="modal-child" id="video-child" onClick={e => e.stopPropagation()}>
-        { component }
-      </div>
-    </div>
-  );
+  
+  let videoReturn = <div className="video-background" onClick={closeModal}>
+                      <div className="video-child" onClick={e => e.stopPropagation()}>
+                        {component}
+                      </div>
+                    </div>
+  let authReturn = <div className="modal-background" onClick={closeModal}>
+                      <div className="modal-child" onClick={e => e.stopPropagation()}>
+                        {component}
+                      </div>
+                    </div>
+
+  if (video){
+    return videoReturn;
+  } else {
+    return authReturn;
+  }
 }
+
 
 const mapStateToProps = state => {
   return {

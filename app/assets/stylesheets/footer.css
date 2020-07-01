@@ -28,6 +28,7 @@
   width: 1096px;
   display: flex;
   align-items: center;
+  color: #959595;
 }
 
 .middle-footer {
@@ -46,6 +47,7 @@
   width: 1096px;
   display: flex;
   align-items: center;
+  color: #959595;
 }
 
 .bottom-footer {
@@ -61,9 +63,15 @@
   width: 1096px;
   display: flex;
   align-items: center;
+  color: #959595;
+  font-size: 13px;
 }
 
 #middle-footer-icon {
     border-radius: 5px;
     height: 50px;
+}
+
+.purple-text {
+  color: #DA8BF0
 }

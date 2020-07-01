@@ -13,7 +13,7 @@
 .show-content-container {
     display: flex;
     width: 1096px;
-    height: 700px;
+    height: 100%;
 }
  
 .left-side-content {
@@ -23,10 +23,12 @@
 }
 
 .show-header-outer {
+  height: 670px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid darkgray;
 }
 
 .left-side-content {
@@ -51,6 +53,7 @@ ul {
 .description-text {
   line-height: 1.7;
   font-size: 13px;
+  white-space: pre;
 }
 
 #play-button-img {
@@ -65,7 +68,6 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 241px;
 }
 
 .game-logo-container {
@@ -95,3 +97,9 @@ ul {
 .values-container {
   margin-left: 30px;
 }
+
+.game-description-image {
+  
+}
+
+    
