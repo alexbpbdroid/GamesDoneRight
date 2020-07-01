@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 // import { openModal } from '../../actions/modal_actions'
 import GameDetail from './game_detail';
 import { ProtectedRoute } from '../../util/route_util';
+import ReviewIndexContainer from '../reviews/review_index_container'
 
 class GamePage extends React.Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class GamePage extends React.Component {
             <div className="price-box">
               $&nbsp;{game.price}
               <br/>
-              <button class="big-purchase-button">Add to cart</button>
+              <button className="big-purchase-button">Add to cart</button>
               
               <center className="wishlist-text">Wishlist it</center>
             </div>
@@ -108,6 +109,7 @@ class GamePage extends React.Component {
           <div className="reviews-container">
             <div className="reviews-inner">User reviews
               <hr/>
+              <ReviewIndexContainer game={game}/>
             </div>
           </div>
         </div>

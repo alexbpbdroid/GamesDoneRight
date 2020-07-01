@@ -7,9 +7,6 @@ class ReviewEdit extends React.Component {
 
   render () {
     let {review, currentUser, handleEdit, deleteReview, handleReview} = this.props;
-    if (!review) {
-      return null;
-    }
 
     return (
       <div>

@@ -20,7 +20,6 @@ class ReviewItem extends React.Component {
     }
   }
 
-
   render () {
     let {review, currentUser} = this.props;
     let buttons;

@@ -1,11 +1,11 @@
 import React from 'react';
 
-class ReviewForm extends Review.Component {
+class ReviewForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = this.props.review
-    this.update = this.update.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.update = this.update.bind(this)
+    this.state = this.props.review
   }
 
   update(field) {
@@ -23,7 +23,7 @@ class ReviewForm extends Review.Component {
 
     let username;
     if (!this.props.currentUser) {
-      return null;
+      return <div>Must be logged in to leave a review</div>;
     } else {
       username = this.props.currentUser.username
     }
@@ -37,7 +37,7 @@ class ReviewForm extends Review.Component {
             onChange={this.update('body')} 
             placeholder="Leave a review" />
             <br/>
-          <button>{this.props.formType}</button>
+          <button type="submit">{this.props.formType}</button>
         </form>
       </div>
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReviewItem from '../review_item';
+import ReviewItem from './review_item';
 import ReviewForm from './review_form_container';
 
 class ReviewIndex extends React.Component {
@@ -14,7 +14,9 @@ class ReviewIndex extends React.Component {
 
   render () {
 
-    let {reviews, deleteReview, currentUser} = this.props;
+    let reviews = this.props.reviews;
+    let deleteReview = this.props.deleteReview;
+    let currentUser = this.props.currentUser
 
     return (
       <div>
