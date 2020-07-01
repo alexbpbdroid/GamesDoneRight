@@ -38,7 +38,7 @@ class GamePage extends React.Component {
         <div className="price-box-wrapper">
           <div className="price-box-outer">
             <div className="price-box">
-              ${game.price}
+              $&nbsp;{game.price}
               <br/>
               <button class="big-purchase-button">Add to cart</button>
               

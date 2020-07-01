@@ -9,10 +9,11 @@
 }
 .centered-nav {
   width: 1096px;
+  display: flex;
   align-items: center;
 }
 .thin-purple-bar {
-  background-image: url("bg.jpg");
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/bg.jpg?versionId=null");
   height: 4px;
   padding: 0px;
   margin: 0px;
@@ -91,6 +92,7 @@
 .user-dropdown-link {
   text-transform: uppercase;
   text-decoration: none;
+  width: 95px;
   color: #de8ae5;
 }
 
@@ -209,15 +211,16 @@
 }
 
 .sign-in-arrow {
-  vertical-align: 3px;
   height: 4px;
-  padding-right: 45px;
+}
+
+.cart-search-outer {
+  width: 100%;
 }
 
 .cart-search {
-  margin-top: 10px;
+  margin-top: 0px;
   float: right;
-  
 }
 
 .cart-icon {
@@ -268,6 +271,7 @@
   height: 52px;
   display: flex;
   align-items: center;
+  width: 70px;
   
 }
 
