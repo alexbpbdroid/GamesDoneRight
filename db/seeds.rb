@@ -11,10 +11,7 @@ require "open-uri"
 User.destroy_all
 Game.destroy_all
 
-demouser = User.create(
-  username: 'demouser',
-  password: 'password',
-)
+
 
 # :id, :title, :price, :description, :release_date, 
 # :developer, :publisher, :esrb_rating, :video
@@ -78,3 +75,8 @@ des3 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/desperad
 des.photos.attach(io: des3, filename: 'des-description.jpg')
 
 des.save!
+
+demouser = User.create(
+  username: 'demouser',
+  password: 'password',
+)

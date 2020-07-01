@@ -23,7 +23,7 @@
 }
 
 .testing-text {
-  width: 1275px;
+  width: 1096px;
   font-family: 'Lato', sans-serif;
   border-bottom: 1px solid rgb(190, 190, 190)
 }
@@ -36,7 +36,7 @@
 }
 
 .whats-new-slider {
-  width: 1275px;
+  width: 1096px;
   height: 245px;
   display: flex;
   align-items: center;
@@ -50,18 +50,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 1275px; */
+  /* width: 1096px; */
   
 }
 
 .discover-games-inner {
-  width: 1275px;
+  width: 1096px;
   font-family: 'Lato', sans-serif;
   border-bottom: 1px solid rgb(190, 190, 190)
 }
 
 .discover-games-placeholder {
-  width: 1275px;
+  width: 1096px;
   height: 400px;
   display: flex;
   align-items: center;
