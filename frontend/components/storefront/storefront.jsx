@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from '../slider/slider'
 import { HashRouter } from 'react-router-dom';
 import WhatsNew from '../whats_new/whats_new'
+import WhatsNewSecond from '../whats_new/whats_new_second'
 import DiscoverGames from '../discover_games/discover_games'
 
 class StoreFront extends React.Component {
@@ -30,6 +31,9 @@ class StoreFront extends React.Component {
 
         <div className="new-slider-container">
           <WhatsNew />
+        </div>
+        <div className="new-slider-container-2">
+          <WhatsNewSecond />
         </div>
 
         <div className="discover-games-outer">

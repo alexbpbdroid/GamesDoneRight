@@ -1,0 +1,65 @@
+.new-card-4-upper {
+  height: 70%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cards/cs.jpg");
+  background-size: cover;
+  border-bottom: 1px solid gray;
+}
+
+.new-card-5-upper {
+  height: 70%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cards/sv.jpg");
+  background-size: cover;
+  border-bottom: 1px solid gray;
+}
+
+.new-card-6-upper {
+  height: 70%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cards/sor-card.jpg?versionId=null");
+  background-size: cover;
+  border-bottom: 1px solid gray;
+}
+
+.new-card-4-middle {
+  text-indent: 15px;
+  display: flex;
+  align-items: center;
+  height: 15%;
+  font-size: 14px;
+}
+
+.new-card-5-middle {
+  text-indent: 15px;
+  display: flex;
+  align-items: center;
+  height: 15%;
+  font-size: 14px;
+}
+
+.new-card-6-middle {
+  text-indent: 15px;
+  display: flex;
+  align-items: center;
+  height: 15%;
+  font-size: 14px;
+}
+
+.new-card-4-lower {
+  height: 15%;
+  display: flex;
+  padding-right: 25px;
+  justify-content: flex-end;
+}
+
+.new-card-5-lower {
+  height: 15%;
+  display: flex;
+  padding-right: 25px;
+  justify-content: flex-end;
+}
+
+.new-card-6-lower {
+  height: 15%;
+  display: flex;
+  padding-right: 25px;
+  justify-content: flex-end;
+}

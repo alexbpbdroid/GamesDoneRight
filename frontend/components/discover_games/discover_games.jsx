@@ -13,10 +13,9 @@ function DiscoverGames() {
             <div className="outer-title-price">
               <div className="just-title">Cyberpunk 2077</div>
               <div className="just-price">$&nbsp;59.99</div>
+              <div className=""></div>
             </div>
          </div>
-        
-
         
           <div className="discover-game">
             <div id="tiny" className="discover-tiny-pic-2"></div>
@@ -25,8 +24,6 @@ function DiscoverGames() {
               <div className="just-price">$&nbsp;14.99</div>
             </div>
           </div>
-        
-
         
           <div className="discover-game">
             <div id="tiny" className="discover-tiny-pic-3"></div>
