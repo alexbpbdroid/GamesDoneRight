@@ -80,7 +80,7 @@ lis1 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/lis/lis-
 lis.photos.attach(io: lis1, filename: 'lis-show-header.jpg')
 
 lis2 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/lis/lis-show-description.jpeg?versionId=null")
-lis.photos.attach(io: lis2, filename: 'lis-show-description.jpg')
+lis.photos.attach(io: lis2, filename: 'lis-show-description.jpeg')
 
 lis.save!
 
@@ -122,7 +122,7 @@ des1 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/desperad
 des.photos.attach(io: des1, filename: 'des-show-header.jpg')
 
 des2 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/desperados/des-show-description.png")
-des.photos.attach(io: des2, filename: 'des-show-description.jpg')
+des.photos.attach(io: des2, filename: 'des-show-description.png')
 
 des.save!
 #------------------------------------------------------------------------------------------------------
@@ -186,7 +186,175 @@ sor1 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/sor4/sor
 sor.photos.attach(io: sor1, filename: 'sor-show-header.jpg')
 
 sor2 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/sor4/sor-show-description.gif")
-sor.photos.attach(io: sor2, filename: 'sor-store-description.gif')
+sor.photos.attach(io: sor2, filename: 'sor-show-description.gif')
 
 sor.save!
+#------------------------------------------------------------------------------------------------------
+
+### Summer in Mara ###
+#------------------------------------------------------------------------------------------------------
+sim = Game.new(
+  title: "Summer in Mara",
+  release_date: "June 16, 2020",
+  esrb_rating: "Everyone 10+",
+  developer: "Chibig",
+  publisher: "Chibig",
+  price: 24.99,
+  works_on: "Windows (7, 8, 10)",
+  description:"
+  Summer in Mara is a summer adventure with farming, crafting, and exploring mechanics set in a tropical
+  archipelago.
+  
+  Summer in Mara is a single-player experience in a calm, relaxing environment, with a handmade look and
+  an exciting narrative. You will be Koa, a little adventurer girl who wants to explore the world that
+  surrounds her.
+  
+  In ‘Summer in Mara’ you’ll have to take care of your own island, harvest your crops, create new tools
+  and buildings, and sail with your boat to discover new islands and secrets",
+  video: "https://www.youtube.com/embed/2DsnX4a0gK4"
+)
+
+sim1 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/sim/sim-show-header.jpg")
+sim.photos.attach(io: sim1, filename: 'sim-show-header.jpg')
+
+sim2 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/sim/sim-show-description.jpg")
+sim.photos.attach(io: sim2, filename: 'sim-show-description.jpg')
+
+sim.save!
+#------------------------------------------------------------------------------------------------------
+
+### Witcher 3 ###
+#------------------------------------------------------------------------------------------------------
+w3 = Game.new(
+  title: "Witcher 3: GOTY Edition",
+  release_date: "August 30, 2016",
+  esrb_rating: "Mature",
+  developer: "CD PROJEKT RED",
+  publisher: "CD PROJEKT RED",
+  price: 14.99,
+  works_on: "Windows (7, 8, 10)",
+  description:"
+  Play the most polished and complete version of the most awarded game of 2015 - The Witcher 3: Wild
+  Hunt – Game of the Year Edition. Now available with all expansions and additional content.
+  
+  Become a professional monster slayer and embark on an adventure of epic proportions! Upon its release,
+  The Witcher 3: Wild Hunt became an instant classic, claiming over 250 Game of the Year awards. Now you
+  can enjoy this huge, over 100-hour long, open-world adventure along with both its story-driven
+  expansions worth an extra 50 hours of gameplay. This edition includes all additional content - new
+  weapons, armor, companion outfits, new game mode and side quests.",
+  video: "https://www.youtube.com/embed/Aduurw9s7GI"
+)
+
+w1 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/w3/w3-show-header.jpg")
+w3.photos.attach(io: w1, filename: 'w3-show-header.jpg')
+
+w2 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/w3/w3-show-description.jpg")
+w3.photos.attach(io: w2, filename: 'w3-show-description.jpg')
+
+w3.save!
+#------------------------------------------------------------------------------------------------------
+
+### Trails of Cold Steel 3 ###
+#------------------------------------------------------------------------------------------------------
+cs = Game.new(
+  title: "Legend of Heroes: Trails of Cold Steel III",
+  release_date: "March 23, 2020",
+  esrb_rating: "Teen",
+  developer: "Nihon Falom",
+  publisher: "NIS America, inc.",
+  price: 59.99,
+  works_on: "Windows (7, 8, 10)",
+  description:"
+  Rean Schwarzer uncovers a dark plot that threatens his homeland. To face their enemies, he must prepare
+  a new generation of heroes as an instructor at a new branch campus and guide them towards victory.
+
+  Nearly a year and a half has passed since the Erebonian civil war, and much has changed since then. From
+  the shifting stances of countries to the internal politics of the Empire, and even the life of Rean
+  Schwarzer, the shadows of the past have given way to the embers of a new chapter. Now graduated from
+  Thors Military Academy, Rean has become an instructor at the Thors Branch Campus, a newly-opened academy
+  that quickly finds itself thrust onto the national stage. It is here that he takes the lead of a brand
+  new Class VII, and must guide a new generation of heroes into an unknown future. Though all is calm now,
+  the nefarious Ouroboros organization continues to weave a dark plot that could engulf the entire continent
+  in war...or perhaps something even more sinister.
+
+  Trails of Cold Steel III invites players into a world full of intrigue and excitement that is years in
+  the making. They will embark on a whirlwind tour through the never-before-seen lands of the recently
+  expanded Erebonian countryside, and encounter fresh faces as well as old friends familiar to fans of
+  the series. In true Trails fashion, the deep, engaging story pairs with an incredible cast of characters
+  and a combat system refined over decades of innovative RPG worldbuilding.",
+  video: "https://www.youtube.com/embed/TCJQMpVpbRg"
+)
+
+cs1 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cs/cs-show-header.jpg")
+cs.photos.attach(io: cs1, filename: 'cs-show-header.jpg')
+
+cs2 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cs/cs-show-description.gif")
+cs.photos.attach(io: cs2, filename: 'cs-show-description.gif')
+
+cs.save!
+#------------------------------------------------------------------------------------------------------
+
+### Darksiders Genesis ###
+#------------------------------------------------------------------------------------------------------
+dsg = Game.new(
+  title: "Darksiders Genesis",
+  release_date: "December 5, 2019",
+  esrb_rating: "Teen",
+  developer: "Airship Syndicate",
+  publisher: "THQ Nordic GmbH",
+  price: 29.99,
+  works_on: "Windows (7, 8, 10)",
+  description:"
+  From the dawn of creation, THE COUNCIL has maintained the Balance across existence. Carrying out their
+  orders are THE HORSEMEN, Nephilim (powerful beings spawned from the unnatural union of angels and demons)
+  who have pledged themselves to the Council and been granted immense power. However, this power came at
+  a tragic cost: the Horsemen were ordered to use their newfound strength to wipe out the rest of their
+  kind. What followed was a bloody battle on Eden where the Horsemen, obeying the will of the Council,
+  annihilated the Nephilim.
+  
+  DARKSIDERS: GENESIS is an action/adventure game that tears its way through hordes of demons, angels, and
+  everything in-between on its way to Hell and back with guns blazing and swords swinging. Genesis gives
+  players their first look at the world of DARKSIDERS before the events of the original game, as well as
+  introduces the horseman STRIFE.",
+  video: "https://www.youtube.com/embed/5_bro_sLnGc"
+  
+)
+
+dsg1 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/dsg/dsg-show-header.jpg")
+dsg.photos.attach(io: dsg1, filename: 'dsg-show-header.jpg')
+
+dsg2 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/dsg/dsg-show-description.gif")
+dsg.photos.attach(io: dsg2, filename: 'dsg-show-description.gif')
+
+dsg.save!
+#------------------------------------------------------------------------------------------------------
+
+### Stardew Valley ###
+#------------------------------------------------------------------------------------------------------
+sv = Game.new(
+  title: "Stardew Valley",
+  release_date: "February 26, 2016",
+  esrb_rating: "Everyone",
+  developer: "ConcernedApe",
+  publisher: "ConcernedApe",
+  price: 29.99,
+  works_on: "Windows (7, 8, 10), Mac OS X (10.10+)",
+  description:"
+  You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and
+  a few coins, you set out to begin your new life. Can you learn to live off the land and turn these
+  overgrown fields into a thriving home? It won't be easy. Ever since Joja Corporation came to town, the
+  old ways of life have all but disappeared. The community center, once the town's most vibrant hub of
+  activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you
+  might just be the one to restore Stardew Valley to greatness!",
+  video: "https://www.youtube.com/embed/_xs_qXACMuA"
+  
+)
+
+sv1 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/sv/sv-show-header.jpg")
+sv.photos.attach(io: sv1, filename: 'sv-show-header.jpg')
+
+sv2 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/sv/sv-show-description.png")
+sv.photos.attach(io: sv2, filename: 'sv-show-description.png')
+
+sv.save!
 #------------------------------------------------------------------------------------------------------

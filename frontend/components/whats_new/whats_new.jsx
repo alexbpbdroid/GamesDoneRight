@@ -4,10 +4,10 @@ function WhatsNew() {
 
   return (
     <div className="whats-new-slider">
-      <div className="new-card-1">
+      <div className="new-card-1"><a href="/#/games/6">
         <div className="new-card-1-upper">
 
-        </div>
+        </div></a>
         <div className="new-card-1-middle">
           Summer in Mara
         </div>
@@ -28,10 +28,10 @@ function WhatsNew() {
         </div>
 
       </div>
-      <div className="new-card-3">
+      <div className="new-card-3"><a href="/#/games/7">
         <div className="new-card-3-upper">
           
-        </div>
+        </div></a>
         <div className="new-card-3-middle">
           Witcher III: GOTY Edition
         </div>
