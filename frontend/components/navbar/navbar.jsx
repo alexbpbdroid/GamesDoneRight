@@ -13,9 +13,9 @@ const Navbar = ({ currentUser, logout, openModal }) => {
 
             <Link to="/"><img id="gdr-small-logo" src="https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/icons/gdr-logo.png?versionId=null" className="logo-icon" /></Link>
             <Link to="/">STORE</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
-            <Link to="/">ABOUT</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
-            <Link to="/">COMMUNITY</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
-            <Link to="/">SUPPORT</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
+            ABOUT&nbsp;<img src={window.arrowURL} className="arrow-icon" />
+            COMMUNITY&nbsp;<img src={window.arrowURL} className="arrow-icon" />
+            SUPPORT&nbsp;<img src={window.arrowURL} className="arrow-icon" />
 
             <div className="dropdown">
               <div className="sign-in-drop-text">SIGN IN &nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
@@ -38,8 +38,8 @@ const Navbar = ({ currentUser, logout, openModal }) => {
           </div>
           <div className="cart-search-outer">
             <div className="cart-search">
-              <Link to="/"><img src={window.cartURL} className="cart-icon" /></Link>
-              <Link to="/"><img src={window.searchURL} className="search-icon" /></Link>
+              <img src={window.cartURL} className="cart-icon" />
+              <img src={window.searchURL} className="search-icon" />
             </div>
           </div>
         </div>
@@ -58,9 +58,9 @@ const Navbar = ({ currentUser, logout, openModal }) => {
 
             <Link to="/"><img id="gdr-small-logo" src="https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/icons/gdr-logo.png?versionId=null" className="logo-icon" /></Link>
             <Link to="/">STORE</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
-            <Link to="/">ABOUT</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
-            <Link to="/">COMMUNITY</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
-            <Link to="/">SUPPORT</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
+            ABOUT&nbsp;<img src={window.arrowURL} className="arrow-icon" />
+            COMMUNITY&nbsp;<img src={window.arrowURL} className="arrow-icon" />
+            SUPPORT&nbsp;<img src={window.arrowURL} className="arrow-icon" />
 
             <div className="user-dropdown">
               <div className="user-dropdown-link">{currentUser.username}&nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
@@ -110,8 +110,8 @@ const Navbar = ({ currentUser, logout, openModal }) => {
           </div>
           <div className="cart-search-outer">
             <div className="cart-search">
-              <Link to="/"><img src={window.cartURL} className="cart-icon" /></Link>
-              <Link to="/"><img src={window.searchURL} className="search-icon" /></Link>
+              <img src={window.cartURL} className="cart-icon" />
+              <img src={window.searchURL} className="search-icon" />
             </div>
           </div>
         </div>
