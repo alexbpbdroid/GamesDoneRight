@@ -1,5 +1,5 @@
 .discover-game {
-  height: 10%;
+  height: 90px;
   width: 100%;
   align-items: center;
   display: flex;
@@ -42,13 +42,13 @@
 }
 
 .big-discover-right {
-  height: 63%;
+  height: 590px;
   background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/Cyberpunk/big-discover-right.jpg?versionId=null");
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
   
 }
 .small-discover-right {
-  height: 33%;
+  height: 306px;
   background: url('https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/Cyberpunk/small-discover-right.jpg?versionId=null');
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
   background-size: contain
@@ -112,3 +112,4 @@
 .just-price {
   margin-right: 20px;
 }
+

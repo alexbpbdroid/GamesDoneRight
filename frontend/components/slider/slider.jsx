@@ -1,36 +1,13 @@
 import React, {useState} from 'react'
-import ImgComp from './imgcomp'
-
-
 
 function Slider() {
   
-
   let sliderArr = [
-    <a href="/#/games/1">
-      <div className='bg1'>
-      </div>
-    </a>,
-     
-    <a href="/#/games/2">
-      <div className='bg2'>
-      </div>
-    </a>,
-
-    <a href="/#/games/3">
-      <div className='bg3'>
-      </div>
-    </a>,
-
-    <a href="/#/games/4">
-      <div className='bg4'>
-      </div>
-    </a>,
-
-    <a href="/#/games/5">
-      <div className='bg5'>
-      </div>
-    </a>
+    <a href="/#/games/1"><div className='bg1' /></a>,
+    <a href="/#/games/2"><div className='bg2' /></a>,
+    <a href="/#/games/3"><div className='bg3' /></a>,
+    <a href="/#/games/4"><div className='bg4' /></a>,
+    <a href="/#/games/5"><div className='bg5' /></a>
   ]
   
   const goLeft = () => {
@@ -41,7 +18,6 @@ function Slider() {
   };
   const [x, setX] = useState(0);
   
-
   return (
     <div className="outer-slider-container">
       <button id="goLeft"  onClick={goLeft}>
@@ -57,7 +33,7 @@ function Slider() {
             );
         })}
       </div>
-      <button id="goRight"  onClick={goRight}>
+      <button id="goRight" onClick={goRight}>
         <i className="fa fa-chevron-circle-right"></i>
       </button>
     </div>

@@ -11,7 +11,6 @@ class Video extends React.Component {
   render() { 
     
     let {game} = this.props
-    // debugger
     if (game === undefined) {
       return null;
     }
@@ -20,7 +19,6 @@ class Video extends React.Component {
       <div className="test-video-modal">
         <iframe width="1280" height="720" src={game.video} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
-      
     );
   }
 }
