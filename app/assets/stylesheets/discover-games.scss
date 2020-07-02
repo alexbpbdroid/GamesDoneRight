@@ -1,0 +1,114 @@
+.discover-game {
+  height: 10%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid #b9b9b9;
+}
+
+.discover-games-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.discover-games-inner {
+  width: 1096px;
+  font-family: 'Lato', sans-serif;
+  border-bottom: 1px solid rgb(190, 190, 190)
+}
+
+.discover-games-placeholder {
+    width: 995px;
+    height: 920px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-games-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.discover-right-side {
+  display: flex;
+  height: 920px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.big-discover-right {
+  height: 63%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/Cyberpunk/big-discover-right.jpg?versionId=null");
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+  
+}
+.small-discover-right {
+  height: 33%;
+  background: url('https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/Cyberpunk/small-discover-right.jpg?versionId=null');
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+  background-size: contain
+}
+
+.discover-game:hover {
+  background: #ECECEC;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+
+#tiny {
+  height: 90%;
+  width: 136px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid darkgray;
+  margin-left: 5px;
+}
+
+.discover-tiny-pic-1 {
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/cp-discover.jpg?versionId=null");
+}
+.discover-tiny-pic-2 {
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/w3-discover.jpg");
+}
+.discover-tiny-pic-3 {
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/lis-discover.jpg");
+}
+.discover-tiny-pic-4 {
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/ds3-discover.jpg");
+}
+.discover-tiny-pic-5 {
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/sb-discover.jpg");
+}
+.discover-tiny-pic-6 {
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/sor-discover.jpg");
+}
+.discover-tiny-pic-7 {
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/dsg-discover.jpg");
+}
+.discover-tiny-pic-8 {
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/sim-discover.jpg");
+}
+.discover-tiny-pic-9 {
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/cs3-discover.jpg");
+}
+.discover-tiny-pic-10 {
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/sv-discover.jpg");
+}
+
+.outer-title-price {
+  display: flex;
+  width: 77%;
+  margin-left: 20px;
+  justify-content: space-between;
+}
+
+.just-title {
+  font-size: 14px;
+}
+.just-price {
+  margin-right: 20px;
+}

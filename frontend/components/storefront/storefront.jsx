@@ -33,7 +33,7 @@ class StoreFront extends React.Component {
         </div>
 
         <div className="discover-games-outer">
-          <div className="testing-text">Discover games</div>
+          <div className="testing-text">Best Sellers</div>
         </div>
 
         <div className="discover-games-container">

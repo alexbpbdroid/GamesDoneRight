@@ -85,6 +85,8 @@
 }
 
 .logo2-icon {
+  border-radius: 5px;
+  border: 1px solid darkgray;
   height: 40px;
   margin-right: 20px;
 }

@@ -1,0 +1,65 @@
+.new-card-1-upper {
+  height: 70%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cards/sim-card.jpg");
+  background-size: cover;
+  border-bottom: 1px solid gray;
+}
+
+.new-card-2-upper {
+  height: 70%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cards/lis-card.jpg");
+  background-size: cover;
+  border-bottom: 1px solid gray;
+}
+
+.new-card-3-upper {
+  height: 70%;
+  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cards/witcher-card.jpg");
+  background-size: cover;
+  border-bottom: 1px solid gray;
+}
+
+.new-card-1-middle {
+  text-indent: 15px;
+  display: flex;
+  align-items: center;
+  height: 15%;
+  font-size: 14px;
+}
+
+.new-card-2-middle {
+  text-indent: 15px;
+  display: flex;
+  align-items: center;
+  height: 15%;
+  font-size: 14px;
+}
+
+.new-card-3-middle {
+  text-indent: 15px;
+  display: flex;
+  align-items: center;
+  height: 15%;
+  font-size: 14px;
+}
+
+.new-card-1-lower {
+  height: 15%;
+  display: flex;
+  padding-right: 25px;
+  justify-content: flex-end;
+}
+
+.new-card-2-lower {
+  height: 15%;
+  display: flex;
+  padding-right: 25px;
+  justify-content: flex-end;
+}
+
+.new-card-3-lower {
+  height: 15%;
+  display: flex;
+  padding-right: 25px;
+  justify-content: flex-end;
+}
