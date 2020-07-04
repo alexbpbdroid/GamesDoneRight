@@ -28,4 +28,4 @@ When the create account or sign-in buttons are clicked within the dropdown of ou
 
 This is achieved by passing a modal type to the component which is handled by case statements to determine which component to render
 
-![alt text](https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/git/carousel-code.png)
+![alt text](https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/git/modal.png)
