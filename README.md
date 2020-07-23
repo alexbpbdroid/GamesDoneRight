@@ -1,6 +1,6 @@
 # GamesDoneRight
 
-GamesDoneRight is is a clone of GOG.com, a digital distribution site for DRM-free games on Windows, Mac, and Linux operating systems.  The site follows standard e-commerce conventions which includes and index of products and their associated display(show) pages, along with the ability to purchase and leave reviwes for these products.
+GamesDoneRight is is a clone of GOG.com, a digital distribution site for DRM-free games on Windows, Mac, and Linux operating systems.  The site follows standard e-commerce conventions which includes and index of products and their associated display(show) pages, along with the ability to purchase and leave reviews for these products.
 
 Live site:  https://gamesdoneright.herokuapp.com/#/
 
