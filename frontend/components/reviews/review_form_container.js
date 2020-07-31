@@ -5,7 +5,7 @@ import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
   return { 
-    review: {body: '', review_id: ownProps.match.params.reviewId},
+    review: {body: ''},
     currentUser: state.entities.users[state.session.id],
     formType: 'Add Review'
   }

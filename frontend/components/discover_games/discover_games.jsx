@@ -12,8 +12,7 @@ function DiscoverGames() {
             <div id="tiny" className="discover-tiny-pic-1"></div>
               <div className="outer-title-price">
                 <div className="just-title">Cyberpunk 2077</div>
-                <div className="just-price">$&nbsp;59.99</div>
-                
+                <div className="just-price">$&nbsp;59.99</div>           
               </div>
           </div>
         </a>

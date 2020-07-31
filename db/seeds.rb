@@ -10,11 +10,20 @@ require "open-uri"
 
 User.destroy_all
 Game.destroy_all
+Review.destroy_all
 
-### DEMO USER ###
+### USERS ###
 #------------------------------------------------------------------------------------------------------
 demouser = User.create(
   username: 'demouser',
+  password: 'password',
+)
+leetgamer420 = User.create(
+  username: 'leetgamer420',
+  password: 'password',
+)
+daniel = User.create(
+  username: 'daniel',
   password: 'password',
 )
 #------------------------------------------------------------------------------------------------------
