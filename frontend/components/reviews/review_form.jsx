@@ -1,11 +1,17 @@
 import React from 'react';
+import {withRouter} from 'react-router'
 
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.update = this.update.bind(this)
-    this.state = this.props.review
+    this.state = {
+      // this.props.review
+        body: this.props.review.body,
+        game_id: this.props.match.params.gameId
+      
+    }
   }
 
   update(field) {
@@ -13,9 +19,10 @@ class ReviewForm extends React.Component {
   }
 
   handleSubmit(e) {
+    // debugger
     e.preventDefault();
     this.props.handleReview(this.state)
-    this.setState({body: ''});
+    this.setState({body: ""});
     if (this.props.formType === 'Update') this.props.handleEdit();
   }
 
@@ -27,7 +34,7 @@ class ReviewForm extends React.Component {
     } else {
       username = this.props.currentUser.username
     }
-  
+    // debugger
     return (
       <div>
         <form className="review-form" onSubmit={this.handleSubmit}>
@@ -44,4 +51,4 @@ class ReviewForm extends React.Component {
   }
 }
 
-export default ReviewForm;
+export default withRouter(ReviewForm);
