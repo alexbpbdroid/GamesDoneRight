@@ -17,10 +17,15 @@ class ReviewIndex extends React.Component {
     let reviews = this.props.reviews;
     let deleteReview = this.props.deleteReview;
     let currentUser = this.props.currentUser
-
+    let displayForm = <ReviewForm />
+    reviews.forEach((review) => {
+      if (review.author_id === currentUser.id) { 
+        displayForm = <></>
+      }
+    }) 
     return (
       <div>
-        <ReviewForm />
+        {displayForm}
         <br/>
         {reviews.reverse().map((review) =>
           <ReviewItem

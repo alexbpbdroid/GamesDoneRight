@@ -7,7 +7,7 @@ class ReviewEdit extends React.Component {
 
   render () {
     let {review, currentUser, handleEdit, deleteReview, handleReview} = this.props;
-
+    
     return (
       <div>
         <ReviewForm 
@@ -30,7 +30,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   handleReview: review => dispatch(updateReview(review)),
-  deleteReview: review => dispatch(deleteReview(reviewId))
+  deleteReview: () => dispatch(deleteReview(reviewId))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReviewEdit);

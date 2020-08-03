@@ -6,20 +6,25 @@ class ReviewForm extends React.Component {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.update = this.update.bind(this)
-    this.state = {
-      // this.props.review
-        body: this.props.review.body,
-        game_id: this.props.match.params.gameId
+    // this.state = {
+    //   // this.props.review
+    //     body: this.props.review.body,
+    //     game_id: this.props.match.params.gameId
       
-    }
+    // }
+    this.state = this.props.review
+    this.state.game_id = this.props.match.params.gameId
   }
 
   update(field) {
-    return e => this.setState({[field]: e.currentTarget.value})
+    
+    return e => {
+      
+      this.setState({body: e.currentTarget.value})}
   }
 
   handleSubmit(e) {
-    // debugger
+    
     e.preventDefault();
     this.props.handleReview(this.state)
     this.setState({body: ""});
@@ -27,14 +32,14 @@ class ReviewForm extends React.Component {
   }
 
   render () {
-
+    
     let username;
     if (!this.props.currentUser) {
       return <div>Must be logged in to leave a review</div>;
     } else {
       username = this.props.currentUser.username
     }
-    // debugger
+    
     return (
       <div>
         <form className="review-form" onSubmit={this.handleSubmit}>
