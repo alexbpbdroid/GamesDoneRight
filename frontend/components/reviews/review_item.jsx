@@ -26,21 +26,28 @@ class ReviewItem extends React.Component {
     if ( currentUser && currentUser.id === review.author_id) {buttons = (
       <div>
         <button onClick={() => this.setState({edit: true})}>Edit</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
         <button onClick={this.handleDelete}>Delete</button>
       </div>)
       } else {
-        buttons = <div></div>
+        buttons = <></>
       }
 
     return (
       <div>
         {!this.state.edit ? (
-          <div>
-            <h4>{review.username}</h4>
-            <h5>{review.body}</h5>
-            {buttons}
+          <div className="review-item-outer">
+            <div className="review-item-inner">
+              <div className="review-username">{review.username}</div>
+              <div className="review-body">{review.body}
+                <br /><br />
+                <div>{buttons}</div>
+              </div>
+            </div>
+            
           </div>
         ) : (<ReviewEdit review={review} handleEdit={this.handleEdit}/>)}
+        <br/><br/>
       </div>
     )
   }

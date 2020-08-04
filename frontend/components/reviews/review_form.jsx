@@ -43,13 +43,17 @@ class ReviewForm extends React.Component {
     return (
       <div>
         <form className="review-form" onSubmit={this.handleSubmit}>
-          <div>{username}</div>
-          <textarea className="review-text" 
-            value={this.state.body} 
-            onChange={this.update('body')} 
-            placeholder="Leave a review" />
+          <div className="form-username">{username}</div>
+          <div className="form-textarea">
+            <textarea cols="105" rows="7" className="review-text"
+              value={this.state.body}
+              onChange={this.update('body')}
+              placeholder="Leave a review" />
+              <br/>
+            <button type="submit">{this.props.formType}</button>
+          </div>
             <br/>
-          <button type="submit">{this.props.formType}</button>
+          
         </form>
       </div>
     )
