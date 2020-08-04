@@ -19,7 +19,7 @@ class ReviewIndex extends React.Component {
     let currentUser = this.props.currentUser
     let displayForm = <ReviewForm />
     reviews.forEach((review) => {
-      if (review.author_id === currentUser.id) { 
+      if (currentUser && review.author_id === currentUser.id) { 
         displayForm = <></>
       }
     }) 

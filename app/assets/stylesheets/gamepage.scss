@@ -23,7 +23,7 @@
 }
 
 .show-header-outer {
-  height: 655px;
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -56,11 +56,22 @@ ul {
   white-space: pre;
 }
 
-#play-button-img {
-  height: 200px;
+#show-header-img {
+  height: 100%;
+  width: -webkit-fill-available;
 }
 
-#play-button-img:hover {
+#show-play-button {
+  font-size: 200px;
+  color: white;
+  text-shadow: 10px 10px 10px black;
+  position: absolute;
+  left: 45%;
+}
+
+#show-play-button:hover {
+  color: skyblue;
+  transition: 0.5s;
   cursor: pointer;
 }
 

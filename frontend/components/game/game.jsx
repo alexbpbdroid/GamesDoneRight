@@ -24,17 +24,20 @@ class GamePage extends React.Component {
     }
 
     const styles = {
-      headerContainer: {
-        width: 100 + '%',
-        backgroundImage: `url(${game.photoUrls[0]})`
-      }
+      // headerContainer: {
+      //   width: 100 + '%',
+      //   backgroundImage: `url(${game.photoUrls[0]})`
+      // }
     };
 
     return (
       <>
         <div className="show-header-outer" style={styles.headerContainer}>
+          <img id="show-header-img" src={game.photoUrls[0]} alt=""/>
           <div className="play-button-container">
-            <img id="play-button-img" src="https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/icons/play-video-button.png" onClick={() => this.props.openModal('video')}/>
+            <span className="material-icons" id="show-play-button" onClick={() => this.props.openModal('video')}>
+              play_circle_outline
+            </span>
           </div>
         </div>
         <div className="price-box-wrapper">
