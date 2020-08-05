@@ -6,13 +6,14 @@
 #  title        :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
-#  price        :integer          default(0)
+#  price        :float            default(0.0)
 #  description  :text
 #  release_date :string
 #  developer    :string
 #  publisher    :string
 #  esrb_rating  :string
-#  index        :integer
+#  works_on     :string
+#  video        :string
 #
 
 # This model initially had no columns defined. If you add columns to the

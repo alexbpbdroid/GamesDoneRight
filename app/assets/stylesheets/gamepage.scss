@@ -23,8 +23,7 @@
 }
 
 .show-header-outer {
-  height: 100%;
-  width: 100%;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,8 +56,8 @@ ul {
 }
 
 #show-header-img {
-  height: 100%;
-  width: -webkit-fill-available;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 #show-play-button {
@@ -70,7 +69,7 @@ ul {
 }
 
 #show-play-button:hover {
-  color: skyblue;
+  color: rgb(203, 237, 250);
   transition: 0.4s;
   cursor: pointer;
 }

@@ -35,7 +35,7 @@ class ReviewForm extends React.Component {
     
     let username;
     if (!this.props.currentUser) {
-      return <div>Must be logged in to leave a review</div>;
+      return <div>* Must be logged in to leave a review<br /><br /></div>
     } else {
       username = this.props.currentUser.username
     }
