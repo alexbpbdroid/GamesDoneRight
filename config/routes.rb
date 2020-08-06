@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resources :games, only: [:index, :show]
     resource :session, only: [:create, :destroy]
     resources :reviews
+    resources :cart_items, only: [:index, :create, :destroy]
   end  
 end

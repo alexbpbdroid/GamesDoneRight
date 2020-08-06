@@ -10,7 +10,7 @@
 #
 class CartItem < ApplicationRecord
   validates :user_id, uniqueness: { scope: :game_id,
-  message: "Game is already in cart"}
+    message: "Game is already in cart"}
 
   belongs_to :user,
     foreign_key: :user_id
