@@ -1,11 +1,14 @@
 class Api::CartItemsController < ApplicationController
 
-  before_action: :require_logged_in
+  before_action :require_logged_in
 
   def index
-    @cart_games = User.find_by[id: current_user.id].includes(:cart_games)
-    if @cart_games
-      render json: @cart_games
+   @current_user = current_user
+   @cart_items = @current_user.cart_items
+   @cart_games = @current_user.cart_games.with_attached_photos
+   
+    if @cart_games     
+      render :index
     else
       render json: ['No items in shopping cart'], status: 404
     end
@@ -14,12 +17,11 @@ class Api::CartItemsController < ApplicationController
   def create
     @cart_item = CartItem.new(
       user_id: current_user.id,
-      game_id: cart_items_params[:game_id]
+      game_id: cart_item_params[:game_id]
     )
 
     if @cart_item.save
-      @cart_game = @cart_item.game
-      render json: @cart_game
+      render :create
     else
       render json: @cart_item.errors.full_messages, status: 400
     end
@@ -37,8 +39,8 @@ class Api::CartItemsController < ApplicationController
 
   private
 
-  def cart_items_params
-    params.require(:cart_items).permit(:user_id, :game_id)
+  def cart_item_params
+    params.require(:cart_item).permit(:game_id)
   end
 
 end
