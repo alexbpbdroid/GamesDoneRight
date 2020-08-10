@@ -26,9 +26,10 @@ class Search extends React.Component {
       searchField: e.target.value,
       searching: true
     })
+    this.handleSearch();
   }
 
-  handleSearch(e) {
+  handleSearch() {
     this.setState({
       searchResults: this.props.games.filter((game) =>
         game.title.toLowerCase().includes(this.state.searchField.toLowerCase())
@@ -36,7 +37,7 @@ class Search extends React.Component {
     })
   }
 
-  handleReset(e) {
+  handleReset() {
     this.setState({ 
       searchField: "",
       searchResults: [],
@@ -46,32 +47,26 @@ class Search extends React.Component {
 
   render() {
 
-    let searchResults;
-
-    if (this.props.games) {
-      searchResults = this.state.searchResults.map((searchResult) => {
-        return (
-          <div className="search-result">
-            
-              <div className="search-title">{searchResult.title}</div>
-              <div className="search-price"> {searchResult.price}</div>
-             
-            
-          </div>
-        )
-      })
-    }
+    let searchResults = this.state.searchResults.map((searchResult) => {
+      return (
+        <div className="search-result" key={searchResult.id}>
+            <div className="search-title">{searchResult.title}</div>
+            <div className="search-price"> {searchResult.price}</div>
+        </div>
+      )
+    })
+    
 
 
     return (
       <div>
         <form>
           <input type="text"
-            onChange={this.handleSearch}
+            onChange={this.handleChange}
             value={this.state.searchField}
           />
         </form>
-        <ul>{searchResults}</ul>
+        <ul className="all-results">{searchResults}</ul>
       </div>
     )
   }

@@ -1,10 +1,15 @@
 .search-result {
   background: white;
   display: flex;
-  // z-idnex:
+  justify-content: space-between;
 }
 
 .search-result:hover {
   background: lightgray;
   cursor: pointer;
+}
+
+.all-results {
+  position:absolute;
+  z-index: 100;
 }
