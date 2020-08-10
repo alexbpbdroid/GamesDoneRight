@@ -39,8 +39,9 @@ const Navbar = ({ currentUser, logout, openModal }) => {
           </div>
           <div className="cart-search-outer">
             <div className="cart-search">
-              <img src={window.cartURL} className="cart-icon" />
-              <img src={window.searchURL} className="search-icon" />
+              {/* <img src={window.cartURL} className="cart-icon" /> */}
+              <Search />
+              {/* <img src={window.searchURL} className="search-icon" /> */}
             </div>
           </div>
         </div>
@@ -111,8 +112,9 @@ const Navbar = ({ currentUser, logout, openModal }) => {
           </div>
           <div className="cart-search-outer">
             <div className="cart-search">
-              <img src={window.cartURL} className="cart-icon" />
-              <img src={window.searchURL} className="search-icon" />
+              {/* <img src={window.cartURL} className="cart-icon" /> */}
+              <Search />
+              {/* <img src={window.searchURL} className="search-icon" /> */}
             </div>
           </div>
         </div>
