@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Search from "../search/search_container"
 
 
 const Navbar = ({ currentUser, logout, openModal }) => {

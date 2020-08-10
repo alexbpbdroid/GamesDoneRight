@@ -48,9 +48,30 @@ class Search extends React.Component {
 
     let searchResults;
 
+    if (this.props.games) {
+      searchResults = this.state.searchResults.map((searchResult, i) => {
+        return (
+          <div className="search-results">
+            <div>
+              {searchResult.title}
+              {searchResult.price}
+            </div>
+          </div>
+        )
+      })
+    }
+
 
     return (
-      <div></div>
+      <div>
+        <form>
+          <input type="text"
+            onChange={this.handleSearch}
+            value={this.state.searchField}
+          />
+        </form>
+        <ul>{searchResults}</ul>
+      </div>
     )
   }
 }
