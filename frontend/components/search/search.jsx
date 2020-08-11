@@ -10,31 +10,31 @@ class Search extends React.Component {
       searching: false,
       searchResults: []
     }
-    this.handleChange = this.handleChange.bind(this)
     this.handleSearch = this.handleSearch.bind(this)
     this.handleReset = this.handleReset.bind(this)
-    
+    this.handleExitSearch = document.body.addEventListener('click', (e) => {
+      if (!e.target.className.includes("search")) this.handleReset();
+    })
   }
 
   componentDidMount() {
     this.props.fetchGames();
   }
 
-  handleChange(e) {
+  handleSearch(e) {
     e.preventDefault();
-    this.setState({ 
-      searchField: e.target.value,
-      searching: true
-    })
-    this.handleSearch();
-  }
-
-  handleSearch() {
-    this.setState({
-      searchResults: this.props.games.filter((game) =>
-        game.title.toLowerCase().includes(this.state.searchField.toLowerCase())
+    let query = e.target.value
+    if (query.length > 0) {
+      this.setState({
+        searchField: e.target.value,
+        searching: true,
+        searchResults: this.props.games.filter((game) =>
+        game.title.toLowerCase().includes(query.toLowerCase())
       )
-    })
+      })
+    } else {
+      this.handleReset()
+    }
   }
 
   handleReset() {
@@ -56,13 +56,11 @@ class Search extends React.Component {
       )
     })
     
-
-
     return (
       <div>
         <form>
-          <input type="text"
-            onChange={this.handleChange}
+          <input className="search-box" type="text"      
+            onChange={this.handleSearch}
             value={this.state.searchField}
           />
         </form>

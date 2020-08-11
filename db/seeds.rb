@@ -139,7 +139,7 @@ des.save!
 ### SPONGEBOB ###
 #------------------------------------------------------------------------------------------------------
 sb = Game.new(
-  title: "SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated",
+  title: "SpongeBob: Battle for Bikini Bottom - Rehydrated",
   release_date: "June 23, 2020",
   esrb_rating: "Everyone 10+",
   developer: "Purple Lamp Studios",

@@ -2,6 +2,8 @@
   background: white;
   display: flex;
   justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .search-result:hover {
@@ -12,4 +14,10 @@
 .all-results {
   position:absolute;
   z-index: 100;
+  min-width: 400px;
+  
+}
+
+.search-box:focus, select:focus {
+  outline:none
 }

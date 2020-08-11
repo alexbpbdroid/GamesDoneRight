@@ -62,8 +62,7 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  cursor: default;
-  
+  cursor: default; 
 }
 
 .dropdown-content {
