@@ -23,16 +23,9 @@ class GamePage extends React.Component {
       return null;
     }
 
-    const styles = {
-      // headerContainer: {
-      //   width: 100 + '%',
-      //   backgroundImage: `url(${game.photoUrls[0]})`
-      // }
-    };
-
     return (
       <>
-        <div className="show-header-outer" style={styles.headerContainer}>
+        <div className="show-header-outer">
           <img id="show-header-img" src={game.photoUrls[0]} alt=""/>
           <div className="play-button-container">
             <span className="material-icons" id="show-play-button" onClick={() => this.props.openModal('video')}>
