@@ -35,7 +35,7 @@ class ReviewForm extends React.Component {
     
     let username;
     if (!this.props.currentUser) {
-      return <div>* Must be logged in to leave a review<br /><br /></div>
+      return <div>* Must be logged in to leave a review<br /><br /><br/><br/></div>
     } else {
       username = this.props.currentUser.username
     }
@@ -49,10 +49,10 @@ class ReviewForm extends React.Component {
               value={this.state.body}
               onChange={this.update('body')}
               placeholder="Leave a review" />
-              <br/>
+              
             <button type="submit">{this.props.formType}</button>
           </div>
-            <br/>
+            
           
         </form>
       </div>

@@ -56,14 +56,12 @@ class ReviewItem extends React.Component {
                 <div className="review-username">{review.username}</div>
               </div>
               <div className="review-body">{review.body}
-                <br /><br />
                 <div>{buttons}</div>
               </div>
             </div>
             
           </div>
         ) : (<ReviewEdit review={review} handleEdit={this.handleEdit}/>)}
-        <br/><br/>
       </div>
     )
   }

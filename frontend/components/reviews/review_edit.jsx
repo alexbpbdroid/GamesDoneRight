@@ -9,7 +9,8 @@ class ReviewEdit extends React.Component {
     let {review, currentUser, handleEdit, deleteReview, handleReview} = this.props;
     
     return (
-      <div>
+      <div className="review-edit-form">
+        <br/>
         <ReviewForm 
           review={review}
           currentUser={currentUser}

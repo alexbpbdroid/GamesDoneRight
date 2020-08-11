@@ -24,9 +24,8 @@ class ReviewIndex extends React.Component {
       }
     }) 
     return (
-      <div>
+      <div className="review-index">
         {displayForm}
-        <br/>
         {reviews.reverse().map((review) =>
           <ReviewItem
             key={review.id}
