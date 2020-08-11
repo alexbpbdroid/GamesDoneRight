@@ -58,7 +58,6 @@
   color: #F8B1FE
 }
 
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -74,7 +73,6 @@
   z-index: 1;
   
 }
-
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -118,12 +116,10 @@
   
 }
 
-
 .sign-out-link:hover {
   cursor: pointer;
   background-color: lightgray
 }
-
 
 .user-dropdown:hover .user-dropdown-content {
   display: block;
@@ -133,7 +129,6 @@
   border: 2px solid #824B9D;
 }
 
-
 #user-menu-drop {
   height: 478px;
   left: -75px;
@@ -141,6 +136,7 @@
   color: black;
   line-height: normal;
 }
+
 .user-drop-header {
   display: flex;
   flex-direction: row;
@@ -148,12 +144,11 @@
   justify-content: center;
   margin: 0;
   padding: 0;
-  background-color: #F1F1F1;
+  background-color: #e9e9e9;
   height: 67px;
   border-bottom: 1px solid lightgray;
   color: darkgray
 }
-
 
 .profile-circle {
   height: 45px;
@@ -178,8 +173,6 @@
   text-transform: uppercase;
 }
 
-
-
 #gog-description {
   padding-left: 30px;
   padding-right: 30px;
@@ -196,7 +189,6 @@
 
 .logo-icon { 
   height: 40px;
-  
 }
 
 .arrow-icon {
@@ -270,7 +262,6 @@
   display: flex;
   align-items: center;
   width: 70px;
-  
 }
 
 .sign-in-drop-text:hover {
