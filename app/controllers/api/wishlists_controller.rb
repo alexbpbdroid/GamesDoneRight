@@ -5,7 +5,7 @@ class Api::WishlistsController < ApplicationController
   end
 
   def show
-    @wishlist = Wishllist.find(params[:id])
+    @wishlist = Wishlist.find(params[:id])
   end
 
   def create

@@ -1,0 +1,1 @@
+json.extract! @wishlist, :id, :user_id, :game_id, :saved
