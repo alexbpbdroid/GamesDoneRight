@@ -91,8 +91,10 @@
 .user-dropdown-link {
   text-transform: uppercase;
   text-decoration: none;
-  width: 95px;
   color: #de8ae5;
+  height: 52px;
+  display: flex;
+  align-items: center;
 }
 
 .user-dropdown-link:hover {
@@ -100,11 +102,8 @@
 }
 
 .user-dropdown {
-  
   position: relative;
-  
   cursor: default;
-  
 }
 
 .user-dropdown-content {
@@ -130,8 +129,7 @@
   display: block;
 }
 
-#purple-line {
-  
+#purple-line { 
   border: 2px solid #824B9D;
 }
 
@@ -154,7 +152,6 @@
   height: 67px;
   border-bottom: 1px solid lightgray;
   color: darkgray
-  
 }
 
 
@@ -165,10 +162,8 @@
 }
 
 .your-account-text {
-  
   margin-bottom: 5px;
   margin-left: 10px;
-  
   font-size: 14px;
   font-weight: 400;
   color: #9a9a9a;
@@ -220,15 +215,19 @@
 .cart-search {
   margin-top: 0px;
   float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
 }
 
-.cart-icon {
-  height: 30px;
-  margin-right: 30px;
+#cart-icon {
+  color: #D8D8D8;
 }
 
-.search-icon {
-  height: 30px;
+#cart-icon:hover {
+  color: white;
+  cursor: pointer;
 }
 
 .sign-in-drop-buttons {

@@ -49,17 +49,20 @@ class Search extends React.Component {
     let searchResults = this.state.searchResults.map((searchResult) => {
       return (
         <Link key={searchResult.id} to={`/games/${searchResult.id}`} onClick={() => this.handleReset()}>
-          <div className="search-result" >
+          <div className="search-result">
             <img className="search-thumbnail" src={searchResult.photoUrls[2]} alt="" />
-            <div className="search-title">{searchResult.title}</div>
-            <div className="search-price"> {searchResult.price}</div>
+            <div className="search-title-price">
+              <div className="search-title">{searchResult.title}</div>
+              <div className="search-price"> {searchResult.price}</div>
+            </div>
           </div>
         </Link>
       )
     })
     
     return (
-      <div>
+      <div className="outer-search-container">
+        <span id="search-icon" className="material-icons">search</span>
         <form>
           <input className="search-box" type="text"      
             onChange={this.handleSearch}

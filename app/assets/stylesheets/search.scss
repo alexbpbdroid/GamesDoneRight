@@ -1,45 +1,71 @@
 .all-results {
-  position:absolute;
+  position: absolute;
   z-index: 100;
-  min-width: 400px;
+  min-width: 520px;
   top: 56px;
 }
 
 .search-result {
   background: white;
   display: flex;
-  justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid lightgray;
   align-items: center;
-  max-height: 70px;
+  max-height: 75px;
 }
 
 .search-result:hover {
-  background: lightgray;
+  background: rgb(238, 238, 238);
   cursor: pointer;
 }
 
-.search-result:hover > .search-price {
+.search-result:hover > .search-title-price > .search-price {
   background-image: linear-gradient(-180deg, #9fbf00, #80ab00 91%); 
   color: white;
 }
 
+.search-box {
+  caret-color: white;
+  background: none;
+  color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid gray;
+}
 
 .search-box:focus, select:focus {
-  outline:none
+  outline:none;
 }
 
 .search-thumbnail {
   padding: 5px;
-  width: 20%
+  height: 65px;
 }
 
 .search-price {
-  border: 1px solid gray;
+  border: 1px solid lightgray;
   border-radius: 5px;
   width: 50px;
   text-align: center;
   background: white;
+}
+
+.outer-search-container {
+  display: flex;
+  align-items: center;
+}
+
+#search-icon {
+  color: #D8D8D8;
+  margin-right: 5px;
+}
+
+.search-title-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  padding-left: 15px;
 }
