@@ -14,10 +14,10 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchgames: () => dispatch(fetchGames()),
+    fetchGames: () => dispatch(fetchGames()),
     fetchWishlists: () => dispatch(fetchWishlists()),
     deleteWishlist: (wishlistId) => dispatch(deleteWishlist(wishlistId))
   }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps))(WishlistPage)
+export default connect(mapStateToProps, mapDispatchToProps)(WishlistPage)

@@ -1,7 +1,5 @@
 import React from 'react';
-// import { Provider } from 'react-redux';
 import { Route, Switch} from 'react-router-dom';
-
 import StorefrontContainer from './storefront/storefront_container'
 import GamePage from './game/game_container'
 import GlobalFooter from './footer/footer'
@@ -9,10 +7,10 @@ import Modal from './modal/modal';
 import NavbarContainer from './navbar/navbar_container';
 import WishlistContainer from './wishlist/wishlist_container';
 
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+// import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-  <div>
+  <div className="full-page">
     <Modal />
     <header>
       <NavbarContainer />

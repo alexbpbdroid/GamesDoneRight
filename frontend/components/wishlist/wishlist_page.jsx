@@ -15,7 +15,9 @@ class WishlistPage extends React.Component {
   }
 
   render() {
-
+    if (!this.props.games || !this.props.wishlists) {
+      return null;
+    }
     const { currentUser, wishlists } = this.props;
     let userWishlist = Object.values(wishlists)
       .filter((wishlist) => wishlist.user_id === currentUser.id)
@@ -27,11 +29,20 @@ class WishlistPage extends React.Component {
       <div className="wishlist">
         WISHLISTED TITLES ({games.length})
         <div className="wishlist-games">
-          {games.map((game) => 
-            <div className="wishlist-single-game">
-              {game.title}{game.price}
-            </div>
-          )}
+          {games.map((game) => (
+            <>
+              <div className="wishlist-single-game" key={game.id}>
+                {game.title}{game.price}
+              </div>
+              <div>
+                <button onClick={() => 
+                this.props.deleteWishlist(userWishlist.find((wishlist) => 
+                  wishlist.game_id === game.id).id)}
+                >
+                </button>
+              </div>
+            </>
+          ))}
         </div>
       </div>
     )
