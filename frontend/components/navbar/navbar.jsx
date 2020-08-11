@@ -40,7 +40,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
           <div className="cart-search-outer">
             <div className="cart-search">
               <Search />
-              <span id="cart-icon" class="material-icons">shopping_cart</span>
+              <span id="cart-icon" className="material-icons">shopping_cart</span>
             </div>
           </div>
         </div>

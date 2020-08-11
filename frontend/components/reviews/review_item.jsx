@@ -32,13 +32,29 @@ class ReviewItem extends React.Component {
       } else {
         buttons = <></>
       }
+    //random profile color
+    let usernameToColor = function(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+      }
+      let color = '#';
+      for (let i = 0; i < 3; i++) {
+        let value = (hash >> (i * 8)) & 0xFF;
+        color += ('00' + value.toString(16)).substr(-2);
+      }
+      return color;
+    }
 
     return (
       <div>
         {!this.state.edit ? (
           <div className="review-item-outer">
             <div className="review-item-inner">
-              <div className="review-username">{review.username}</div>
+              <div className="review-profile">
+                <div className="review-icon"><span style={{color: usernameToColor(review.username)}} id="review-profile-icon" className="material-icons">account_circle</span></div>
+                <div className="review-username">{review.username}</div>
+              </div>
               <div className="review-body">{review.body}
                 <br /><br />
                 <div>{buttons}</div>

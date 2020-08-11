@@ -40,7 +40,7 @@ class GamePage extends React.Component {
               <br/>
               <button className="big-purchase-button">Add to cart</button>
               
-              <center className="wishlist-text">Wishlist it</center>
+              <center className="wishlist-text"><span class="material-icons">favorite_border</span> Wishlist it</center>
             </div>
           </div>
         </div>

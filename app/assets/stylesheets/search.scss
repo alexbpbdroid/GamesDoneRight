@@ -1,8 +1,9 @@
 .all-results {
-  position: absolute;
+  position: relative;
   z-index: 100;
   min-width: 520px;
-  top: 56px;
+  top: 64px;
+  right: 150%;
 }
 
 .search-result {
@@ -55,6 +56,7 @@
 .outer-search-container {
   display: flex;
   align-items: center;
+  width: 216px;
 }
 
 #search-icon {
