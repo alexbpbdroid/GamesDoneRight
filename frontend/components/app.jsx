@@ -1,24 +1,18 @@
 import React from 'react';
 // import { Provider } from 'react-redux';
-import {
-  Route,
-  Redirect,
-  Switch,
-  Link,
-  HashRouter
-} from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 
 import StorefrontContainer from './storefront/storefront_container'
 import GamePage from './game/game_container'
 import GlobalFooter from './footer/footer'
 import Modal from './modal/modal';
 import NavbarContainer from './navbar/navbar_container';
+import WishlistContainer from './wishlist/wishlist_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
-    {/* <VideoModal /> */}
     <Modal />
     <header>
       <NavbarContainer />
@@ -26,9 +20,9 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={StorefrontContainer} />
       <Route path="/games/:gameId" component={GamePage} />
+      <Route path="/wishlists" component={WishlistContainer} />
     </Switch>
     <GlobalFooter />
-
   </div>
 );
 
