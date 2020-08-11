@@ -1,6 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { fetchGames } from "../../actions/game_actions";
+import { Link } from 'react-router-dom';
 
 class Search extends React.Component {
   constructor(props) {
@@ -49,10 +48,13 @@ class Search extends React.Component {
 
     let searchResults = this.state.searchResults.map((searchResult) => {
       return (
-        <div className="search-result" key={searchResult.id}>
+        <Link key={searchResult.id} to={`/games/${searchResult.id}`} onClick={() => this.handleReset()}>
+          <div className="search-result" >
+            <img className="search-thumbnail" src={searchResult.photoUrls[2]} alt="" />
             <div className="search-title">{searchResult.title}</div>
             <div className="search-price"> {searchResult.price}</div>
-        </div>
+          </div>
+        </Link>
       )
     })
     
