@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { openModal } from '../../actions/modal_actions'
-import GameDetail from './game_detail';
-import { ProtectedRoute } from '../../util/route_util';
 import ReviewIndexContainer from '../reviews/review_index_container'
 
 class GamePage extends React.Component {

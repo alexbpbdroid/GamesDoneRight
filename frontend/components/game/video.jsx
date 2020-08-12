@@ -7,7 +7,6 @@ class Video extends React.Component {
     super(props); 
   }
 
-
   render() { 
     
     let {game} = this.props
