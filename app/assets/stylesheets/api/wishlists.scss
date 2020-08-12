@@ -1,3 +1,101 @@
-// Place all the styles related to the api/wishlists controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.wishlist-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wishlist-header {
+  height: 51px;
+  display: flex;
+  align-items: center;
+}
+
+.wishlist-inner {
+  width: 1096px;
+  height: 650px;
+  font-size: 14px;
+  color: #262626;
+  font-weight: bold;
+}
+
+.wishlist-games {
+  font-size: 13px;
+  box-shadow: 0 1px 5px rgba(0,0,0,.15);
+  border-radius: 1px;
+}
+
+.wishlist-single-game {
+  display: flex;
+  justify-content: space-between;
+  font-weight: normal;
+  background: #E1E1E1;
+  height: 60px;
+  padding-right: 10px;
+  border-bottom: 1px solid lightgray
+}
+
+.wishlist-single-game:hover {
+  cursor: pointer;
+  background: rgb(235, 235, 235);
+}
+
+.wishlist-single-game:hover > .wishlist-delete-price > .wishlist-price {
+  color: white;
+  background-image: linear-gradient(-180deg, #9fbf00, #80ab00 91%); 
+}
+
+.wishlist-title {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-indent: 20px;
+}
+
+.wishlist-delete-price {
+  display: flex;
+  align-items: center;
+  color: #686868;
+  justify-content: space-between;
+  width: 92px;
+}
+
+#wishlist-delete-btn {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 25px;
+  height: 25px;
+  color: #686868;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px -1px rgba(0,0,0,.25);
+  background: #DEDEDE;
+  font-weight: 600;
+  font-family: Arial;
+}
+
+#wishlist-delete-btn:hover {
+
+}
+
+.wishlist-price {
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  width: 57px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  box-shadow: 0 1px 3px -1px rgba(0,0,0,.25);
+  background: #DEDEDE;
+}
+
+.wishlist-thumbnail-title {
+  display: flex;
+}
+
+.wishlist-thumbnail {
+  height: 60px;
+  width: 106px;
+}
