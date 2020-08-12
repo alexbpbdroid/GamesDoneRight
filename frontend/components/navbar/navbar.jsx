@@ -82,16 +82,16 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                 </div>
 
                 <br/>
-                <div className="activity-feed-link">Activity feed</div>
+                {/* <div className="activity-feed-link">Activity feed</div>
                 <br/>
                 <div className="your-profile-link">Your profile</div>
                 <hr/>
                 <div className="games-link">Games</div>
                 <br />
                 <div className="movies-link">Movies</div>
-                <br />
-                <div className="wishlist-link">Wishlist</div>
-                <br/>
+                <br /> */}
+                <div id="user-dropdown-links" className="wishlist-link"><Link to="/wishlists">Wishlist</Link></div>
+                {/* <br/>
                 <div className="redeem-code-link">Redeem a code</div>
                 <hr/>
                 <div className="friends">Friends</div>
@@ -103,8 +103,8 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                 <div className="privacy-settings-link">Privacy and settings</div>
                 <br/>
                 <div className="language-currency-link">Language and currency</div>
-                <hr/>
-                <div className="sign-out-link" onClick={logout}>Sign Out</div>
+                <hr/> */}
+                <div id="user-dropdown-links" className="sign-out-link" onClick={logout}>Sign Out</div>
               </div>
             </div>
 
