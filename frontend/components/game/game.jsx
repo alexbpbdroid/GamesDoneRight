@@ -1,21 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ReviewIndexContainer from '../reviews/review_index_container'
+import ReviewIndexContainer from '../reviews/review_index_container';
+
 
 class GamePage extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   componentDidMount() {
-    this.props.fetchGame(this.props.match.params.gameId)
+    this.props.fetchGame(this.props.match.params.gameId);
+    this.props.fetchWishlists();
     window.scrollTo(0, 0);
   }
   
   render () {
     
     let game = this.props.game
-
+    
     if (!game) {
       return null;
     }

@@ -6,7 +6,7 @@ function Slider(props) {
   let slicedGames = games.slice(0,5)
   
   let sliderArr = slicedGames.map((game) => 
-    (<a href={`/#/games/${game.id}`}><div className={`bg${game.id}`} /></a>)
+    (<a href={`/#/games/${game.id}`}><img className="slider-img" src={game.photoUrls[4]} alt=""/></a>)
   )
   
   const goLeft = () => {
