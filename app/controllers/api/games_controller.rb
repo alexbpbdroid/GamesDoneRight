@@ -1,7 +1,7 @@
 class Api::GamesController < ApplicationController
 
   def index
-    @games = Game.all.with_attached_photos
+    @games = Game.with_attached_photos.all
     render :index
   end
 

@@ -15,7 +15,7 @@ class WishlistPage extends React.Component {
   }
 
   render() {
-    if (!this.props.games || !this.props.wishlists) {
+    if (!this.props.games || !this.props.wishlists || !this.props.currentUser) {
       return null;
     }
     const { currentUser, wishlists } = this.props;
@@ -28,7 +28,7 @@ class WishlistPage extends React.Component {
     return (
       <div className="wishlist-outer">
         <div className="wishlist-inner">
-          <div className="wishlist-header">WISHLISTED TITLES ({games.length})</div>
+          <div className="wishlist-header">WISHLISTED TITLES ( {games.length} )</div>
           <div className="wishlist-games">
             {games.map((game) => (
               <>

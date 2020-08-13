@@ -1,14 +1,13 @@
 import React, {useState} from 'react'
 
-function Slider() {
+function Slider(props) {
   
-  let sliderArr = [
-    <a href="/#/games/1"><div className='bg1' /></a>,
-    <a href="/#/games/2"><div className='bg2' /></a>,
-    <a href="/#/games/3"><div className='bg3' /></a>,
-    <a href="/#/games/4"><div className='bg4' /></a>,
-    <a href="/#/games/5"><div className='bg5' /></a>
-  ]
+  let games = props.games
+  let slicedGames = games.slice(0,5)
+  
+  let sliderArr = slicedGames.map((game) => 
+    (<a href={`/#/games/${game.id}`}><div className={`bg${game.id}`} /></a>)
+  )
   
   const goLeft = () => {
     x === 0 ? setX(-100 * (sliderArr.length - 1)) : setX(x + 100);

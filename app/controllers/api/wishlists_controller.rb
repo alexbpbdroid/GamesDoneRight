@@ -1,4 +1,7 @@
 class Api::WishlistsController < ApplicationController
+
+  # before_action :require_logged_in
+
   def index
     @wishlists = Wishlist.all
     render :index

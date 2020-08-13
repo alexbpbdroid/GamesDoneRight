@@ -1,9 +1,9 @@
 import {connect} from 'react-redux';
 import Storefront from './storefront';
-import { fetchGame, fetchGames } from '../../util/game_util';
+import { fetchGame, fetchGames } from '../../actions/game_actions';
 
-const mapStateToProps = ({entities: {games}}) => ({
-  games: Object.values(games)
+const mapStateToProps = (state, ownProps) => ({
+  games: Object.values(state.entities.games)
 })
 
 const mapDispatchToProps = dispatch => ({
