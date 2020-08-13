@@ -63,7 +63,6 @@ cp.photos.attach(io: cp2, filename: 'cp-show-description.jpg')
 cp3 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/cp-discover.jpg")
 cp.photos.attach(io: cp3, filename: 'cp-thumbnail.jpg')
 
-
 cp.save!
 #------------------------------------------------------------------------------------------------------
 
@@ -97,6 +96,9 @@ lis.photos.attach(io: lis2, filename: 'lis-show-description.jpeg')
 
 lis3 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/lis-discover.jpg")
 lis.photos.attach(io: lis3, filename: 'lis-thumbnail.jpg')
+
+lis4 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cards/lis-card.jpg")
+lis.photos.attach(io: lis4, filename: 'lis-card.jpg')
 
 lis.save!
 
@@ -213,6 +215,9 @@ sor.photos.attach(io: sor2, filename: 'sor-show-description.gif')
 sor3 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/sor-discover.jpg")
 sor.photos.attach(io: sor3, filename: 'sor-thumbnail.jpg')
 
+sor4 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cards/sor-card.jpg")
+sor.photos.attach(io: sor4, filename: 'sor-card.jpg')
+
 sor.save!
 #------------------------------------------------------------------------------------------------------
 
@@ -248,6 +253,9 @@ sim.photos.attach(io: sim2, filename: 'sim-show-description.jpg')
 sim3 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/sim-discover.jpg")
 sim.photos.attach(io: sim3, filename: 'sim-thumbnail.jpg')
 
+sim4 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cards/sim-card.jpg")
+sim.photos.attach(io: sim4, filename: 'sim-card.jpg')
+
 sim.save!
 #------------------------------------------------------------------------------------------------------
 
@@ -281,6 +289,9 @@ w3.photos.attach(io: witch2, filename: 'w3-show-description.jpg')
 
 witch3 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/w3-discover.jpg")
 w3.photos.attach(io: witch3, filename: 'w3-thumbnail.jpg')
+
+witch4 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cards/witcher-card.jpg")
+w3.photos.attach(io: witch4, filename: 'witcher-card.jpg')
 
 w3.save!
 #------------------------------------------------------------------------------------------------------
@@ -324,6 +335,9 @@ cs.photos.attach(io: cs2, filename: 'cs-show-description.gif')
 
 cs3 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/cs3-discover.jpg")
 cs.photos.attach(io: cs3, filename: 'cs-thumbnail.jpg')
+
+cs4 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cards/cs.jpg")
+cs.photos.attach(io: cs4, filename: 'cs-card.jpg')
 
 cs.save!
 #------------------------------------------------------------------------------------------------------
@@ -395,6 +409,9 @@ sv.photos.attach(io: sv2, filename: 'sv-show-description.png')
 
 sv3 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/discover-images/sv-discover.jpg")
 sv.photos.attach(io: sv3, filename: 'sv-thumbnail.jpg')
+
+sv4 = open("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/cards/sv.jpg")
+sv.photos.attach(io: sv4, filename: 'sv-card.jpg')
 
 sv.save!
 #------------------------------------------------------------------------------------------------------
