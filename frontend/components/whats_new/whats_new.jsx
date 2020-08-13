@@ -1,44 +1,46 @@
 import React from 'react';
 
-function WhatsNew() {
+function WhatsNew(props) {
 
+  let games = props.games
+  
   return (
     <div className="whats-new-slider">
-      <div className="new-card-1"><a href="/#/games/6">
-        <div className="new-card-1-upper">
 
-        </div></a>
+      <div className="new-card-1">
+        <a href="/#/games/6">
+          <img className="new-card-1-upper" src={games[5].photoUrls[3]} alt=""/>
+        </a>
         <div className="new-card-1-middle">
-          Summer in Mara
+          {games[5].title}
         </div>
         <div className="new-card-1-lower">
-          $&nbsp;24.99
+          $&nbsp;{games[5].price}
         </div>
-
       </div> 
-      <div className="new-card-2"><a href="/#/games/2">
-        <div className="new-card-2-upper">
 
-        </div></a>
+      <div className="new-card-2">
+        <a href="/#/games/2">
+          <img className="new-card-2-upper" src={games[1].photoUrls[3]} alt="" />
+        </a>
         <div className="new-card-2-middle">
-          Life is Strange
+          {games[1].title}
         </div>
         <div className="new-card-2-lower">
-          $&nbsp;19.99
+          $&nbsp;{games[1].price}
         </div>
-
       </div>
-      <div className="new-card-3"><a href="/#/games/7">
-        <div className="new-card-3-upper">
-          
-        </div></a>
+
+      <div className="new-card-3">
+        <a href="/#/games/7">
+          <img className="new-card-3-upper" src={games[6].photoUrls[3]} alt="" />
+        </a>
         <div className="new-card-3-middle">
-          Witcher III: GOTY Edition
+          {games[6].title}
         </div>
         <div className="new-card-3-lower">
-          $&nbsp;14.99
+          $&nbsp;{games[6].price}
         </div>
-
       </div>
     </div>
   )
