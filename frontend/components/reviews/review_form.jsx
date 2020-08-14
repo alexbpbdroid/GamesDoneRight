@@ -6,25 +6,16 @@ class ReviewForm extends React.Component {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.update = this.update.bind(this)
-    // this.state = {
-    //   // this.props.review
-    //     body: this.props.review.body,
-    //     game_id: this.props.match.params.gameId
-      
-    // }
     this.state = this.props.review
     this.state.game_id = this.props.match.params.gameId
   }
 
-  update(field) {
-    
-    return e => {
-      
+  update(field) {  
+    return e => { 
       this.setState({body: e.currentTarget.value})}
   }
 
-  handleSubmit(e) {
-    
+  handleSubmit(e) {  
     e.preventDefault();
     this.props.handleReview(this.state)
     this.setState({body: ""});
@@ -48,12 +39,9 @@ class ReviewForm extends React.Component {
             <textarea cols="105" rows="7" className="review-text"
               value={this.state.body}
               onChange={this.update('body')}
-              placeholder="Leave a review" />
-              
+              placeholder="Leave a review" />            
             <button type="submit">{this.props.formType}</button>
-          </div>
-            
-          
+          </div>        
         </form>
       </div>
     )

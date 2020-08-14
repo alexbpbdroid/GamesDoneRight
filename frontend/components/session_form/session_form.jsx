@@ -66,7 +66,7 @@ class SessionForm extends React.Component {
         <div className="login-form-container">
           <div onClick={this.props.closeModal} className="close-x">x</div>
           <nav className="modal-header">
-            <img src="https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/icons/gdr-logo.png?versionId=null" className="logo2-icon" />{modalHeader}
+            <img src={window.gdrLogoURL} className="logo2-icon" />{modalHeader}
           </nav>
 
           <form onSubmit={this.handleSubmit} className="login-form-box">

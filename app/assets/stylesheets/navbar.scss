@@ -15,7 +15,7 @@
 }
 
 .thin-purple-bar {
-  background-image: url("https://active-storage-gdr-seed.s3-us-west-1.amazonaws.com/bg.jpg?versionId=null");
+  background-image: image-url('bg.jpg');
   height: 4px;
   padding: 0px;
   margin: 0px;
@@ -295,4 +295,8 @@
 
 .nav-store-text {
   color: #D8D8D8
+}
+
+.wishlist-link {
+  color: black;
 }
