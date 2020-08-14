@@ -10,7 +10,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         <div className="centered-nav">
           <div className="middle-navbar-links">
             <Link to="/"><img id="gdr-small-logo" src={window.gdrLogoURL} className="logo-icon" /></Link>
-            <Link to="/">STORE</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
+            <div className="nav-store-link"><Link className="nav-store-text" to="/">STORE</Link></div>
             ABOUT&nbsp;<img src={window.arrowURL} className="arrow-icon" />
             <div className="dropdown">
               <div className="sign-in-drop-text">SIGN IN &nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
@@ -45,7 +45,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         <div className="centered-nav">    
           <div className="middle-navbar-links">
             <Link to="/"><img id="gdr-small-logo" src={window.gdrLogoURL} className="logo-icon" /></Link>
-            <Link to="/">STORE</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
+            <div className="nav-store-link"><Link className="nav-store-text" to="/">STORE</Link></div>
             ABOUT&nbsp;<img src={window.arrowURL} className="arrow-icon" />
             <div className="user-dropdown">
               <div className="user-dropdown-link">{currentUser.username}&nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>            

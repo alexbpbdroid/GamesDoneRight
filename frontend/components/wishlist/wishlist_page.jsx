@@ -16,7 +16,7 @@ class WishlistPage extends React.Component {
   }
 
   render() {
-    if (!this.props.games || !this.props.wishlists || !this.props.currentUser) {
+    if (!this.props.games || !this.props.wishlists) {
       return null;
     }
     const { currentUser, wishlists } = this.props;

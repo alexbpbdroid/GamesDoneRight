@@ -81,8 +81,7 @@
 }
 
 #sign-in-drop {
-  left: -200px;
-  
+  left: -215px;
   width: 500px;
   color: gray;
   line-height: normal;
@@ -284,4 +283,16 @@
   height: 50px;
   display: flex;
   align-items: center;
+}
+
+.modal-btn:hover {
+  cursor: pointer;
+}
+
+.nav-store-link {
+  padding-right: 45px;
+}
+
+.nav-store-text {
+  color: #D8D8D8
 }
