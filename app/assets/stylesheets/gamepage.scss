@@ -15,15 +15,8 @@
     width: 1096px;
     height: 100%;
 }
- 
-.left-side-content {
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-}
 
 .show-header-outer {
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,9 +24,7 @@
 }
 
 .left-side-content {
-  width: 620px;
-  // margin-left: 20px;
-  // border-top: 1px solid gray;
+  width: 625px;
 }
 
 .right-side-content {
@@ -106,5 +97,9 @@ ul {
 
 .values-container {
   margin-left: 30px;
+}
+
+.game-description-image {
+  max-width: 616px;
 }
     

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class WishlistPage extends React.Component {
   constructor(props) {
@@ -32,7 +33,8 @@ class WishlistPage extends React.Component {
           <div className="wishlist-games">
             {games.map((game) => (
               <>
-                <div className="wishlist-single-game" key={game.id}>
+                {/* <div className="wishlist-single-game" key={game.id}> */}
+                <Link to={`/games/${game.id}`} className="wishlist-single-game" key={game.id}>
                   <div className="wishlist-thumbnail-title">
                     <img className="wishlist-thumbnail" src={game.photoUrls[2]} alt="" />
                     <div className="wishlist-title">{game.title}</div>
@@ -45,10 +47,8 @@ class WishlistPage extends React.Component {
                     </button>
                     <div className="wishlist-price">$ {game.price}</div>
                   </div>
-                </div>
-                <div>
-                  
-                </div>
+                </Link>
+                {/* </div> */}
               </>
             ))}
           </div>

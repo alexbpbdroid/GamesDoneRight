@@ -100,3 +100,35 @@
   height: 60px;
   width: 106px;
 }
+
+.wishlist-status {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-wishlist-btn, .add-wishlist-btn, .add-wishlist-btn:active, .delete-wishlist-btn:active {
+  border: none;
+  background:none;
+  cursor: pointer;
+  outline: 0;
+}
+
+.delete-wishlist-btn {
+  color: #FFA200
+}
+
+.saved-wishlist {
+  color: #a16600;
+}
+
+#fav-btn {
+  font-size: 20px;
+}
+
+.unsaved-wishlist, .saved-wishlist {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}

@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import { fetchGame } from '../../actions/game_actions';
 import GamePage from './game';
-import { openModal } from '../../actions/modal_actions',
-import { fetchWishlists, createWishlist, deleteWishlist } from '../../actions/wishlist_actions'
+import { openModal } from '../../actions/modal_actions';
+import { fetchWishlists, createWishlist, deleteWishlist } from '../../actions/wishlist_actions';
 
-const mapStateToProps = ({ entities: { games }}, state, ownProps) => ({
-  game: games[ownProps.match.params.gameId],
+const mapStateToProps = (state, ownProps) => ({
+  game: state.entities.games[ownProps.match.params.gameId],
   wishlists: Object.values(state.entities.wishlists),
   currentUser: state.entities.users[state.session.id]
 })

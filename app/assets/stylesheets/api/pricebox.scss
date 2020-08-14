@@ -1,7 +1,5 @@
 .price-box {
   position: absolute;
-  /* right: 16px; */
-  /* bottom: 0; */
   z-index: 50;
   width: 390px;
   height: 123px;
@@ -35,16 +33,20 @@
   border-right-color: #7fa721;
   color: #fff;
   background-image: linear-gradient(-180deg,#9fbf00,#80ab00 91%);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Lato', sans-serif;
+}
+
+.big-purchase-button:hover {
+      background-image: linear-gradient(-180deg, #aed100, #91c200 80%);
 }
 
 .wishlist-text {
   margin-top: 20px;
   font-size: 16px;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;

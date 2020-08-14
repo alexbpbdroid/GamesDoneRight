@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import ReviewIndexContainer from '../reviews/review_index_container';
 
 
@@ -17,9 +16,49 @@ class GamePage extends React.Component {
   render () {
     
     let game = this.props.game
-    
     if (!game) {
       return null;
+    } else if (!this.props.wishlists) {
+      return null;
+    }
+    let wishlistBtn;
+    const { currentUser, wishlists } = this.props;
+    let userWishlists;
+    let login = <div></div>
+    if (!currentUser) { 
+      userWishlists = [];
+    } else {
+      userWishlists = Object.values(wishlists).filter((wishlist) => wishlist.user_id === currentUser.id)
+    }
+    let thisWishlist = userWishlists.find((wishlist) => wishlist.game_id === game.id);
+    let gameIds = userWishlists.map((wishlist) => wishlist.game_id);
+    if (!gameIds.includes(game.id) && currentUser) {
+      wishlistBtn = (
+        <div className="unsaved-wishlist">
+          <button className="add-wishlist-btn" onClick={() => this.props.createWishlist({
+            game_id: game.id,
+            saved: false
+          })}>
+            <span id="fav-btn" className="material-icons">favorite_border</span>
+          </button> Wishlist it
+        </div> 
+      )
+    } else if (!currentUser) {
+      wishlistBtn = (
+        <div className="unsaved-wishlist">
+          <button className="add-wishlist-btn" onClick={() => this.props.openModal("login")}>
+            <span id="fav-btn" className="material-icons">favorite_border</span>
+          </button> Wishlist it
+        </div>
+      )
+    } else {
+      wishlistBtn = (
+        <div className="saved-wishlist">
+          <button className="delete-wishlist-btn" onClick={() => this.props.deleteWishlist(thisWishlist.id)}>
+            <span id="fav-btn" className="material-icons">favorite</span>
+          </button> Wishlisted
+        </div>
+      )
     }
 
     return (
@@ -37,9 +76,8 @@ class GamePage extends React.Component {
             <div className="price-box">
               $&nbsp;{game.price}
               <br/>
-              <button className="big-purchase-button">Add to cart</button>
-              
-              <center className="wishlist-text"><span class="material-icons">favorite_border</span> Wishlist it</center>
+              <button className="big-purchase-button">Add to cart</button>        
+              <center className="wishlist-text">{wishlistBtn}</center>
             </div>
           </div>
         </div>

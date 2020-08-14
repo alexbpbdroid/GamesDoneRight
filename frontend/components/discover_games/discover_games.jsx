@@ -1,18 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function DiscoverGames(props) {
 
   let games = props.games
 
-
   return (
-
-
     <div className="discover-games-outer">
       <div className="discover-games-placeholder">
         {games.map((game) => (
-          <a href={`/#/games/${game.id}`}>
+          <a key={game.id} href={`/#/games/${game.id}`}>
             <div className="discover-game">
               <img className="discover-thumbnail" src={game.photoUrls[2]} alt=""/>
                 <div className="outer-title-price">
@@ -23,13 +19,11 @@ function DiscoverGames(props) {
           </a>
         ))}
       </div>
-
       <div className="discover-right-side">     
         <a href="/#/games/7"><img src={window.bigDiscoverURL} className="big-discover-right" /></a>
         <a href="/#/games/1"><img src={window.smallDiscoverURL} className="small-discover-right" /></a>
       </div>
-    </div>
-    
+    </div>   
   )
 }
 

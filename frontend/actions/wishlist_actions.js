@@ -26,12 +26,12 @@ export const fetchWishlists = () => dispatch => {
 
 export const fetchWishlist = (wishlistId) => dispatch => {
   return WishlistUtil.fetchWishlist(wishlistId)
-    .then((wishlist) => dispatch(receieveWishlist(wishlist)))
+    .then((wishlist) => dispatch(receiveWishlist(wishlist)))
 }
 
 export const createWishlist = (wishlist) => dispatch => {
   return WishlistUtil.createWishlist(wishlist)
-    .then((wishlist) => dispatch(receieveWishlist(wishlist)))
+    .then((wishlist) => dispatch(receiveWishlist(wishlist)))
 }
 
 export const deleteWishlist = (wishlistId) => dispatch => {
