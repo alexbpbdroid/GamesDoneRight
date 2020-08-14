@@ -63,13 +63,15 @@ class Search extends React.Component {
     return (
       <div className="outer-search-container">
         <span id="search-icon" className="material-icons">search</span>
-        <form>
-          <input className="search-box" type="text"      
-            onChange={this.handleSearch}
-            value={this.state.searchField}
-          />
-        </form>
-        <ul className="all-results">{searchResults}</ul>
+        <div className="form-and-results">
+          <form className="search-form">
+            <input className="search-box" type="text"      
+              onChange={this.handleSearch}
+              value={this.state.searchField}
+            />
+          </form>
+          <div className="all-results">{searchResults}</div>
+        </div>
       </div>
     )
   }

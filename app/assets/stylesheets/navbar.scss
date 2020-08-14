@@ -203,6 +203,7 @@
 
 .cart-search-outer {
   width: 100%;
+  height: 100%
 }
 
 .cart-search {
@@ -211,7 +212,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 235px;
+  height: 100%;
 }
 
 #cart-icon {

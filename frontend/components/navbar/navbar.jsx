@@ -12,8 +12,6 @@ const Navbar = ({ currentUser, logout, openModal }) => {
             <Link to="/"><img id="gdr-small-logo" src={window.gdrLogoURL} className="logo-icon" /></Link>
             <Link to="/">STORE</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
             ABOUT&nbsp;<img src={window.arrowURL} className="arrow-icon" />
-            COMMUNITY&nbsp;<img src={window.arrowURL} className="arrow-icon" />
-            SUPPORT&nbsp;<img src={window.arrowURL} className="arrow-icon" />
             <div className="dropdown">
               <div className="sign-in-drop-text">SIGN IN &nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
               <div className="dropdown-content" id="sign-in-drop">
@@ -49,8 +47,6 @@ const Navbar = ({ currentUser, logout, openModal }) => {
             <Link to="/"><img id="gdr-small-logo" src={window.gdrLogoURL} className="logo-icon" /></Link>
             <Link to="/">STORE</Link>&nbsp;<img src={window.arrowURL} className="arrow-icon" />
             ABOUT&nbsp;<img src={window.arrowURL} className="arrow-icon" />
-            COMMUNITY&nbsp;<img src={window.arrowURL} className="arrow-icon" />
-            SUPPORT&nbsp;<img src={window.arrowURL} className="arrow-icon" />
             <div className="user-dropdown">
               <div className="user-dropdown-link">{currentUser.username}&nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>            
               <div className="user-dropdown-content" id="user-menu-drop">
