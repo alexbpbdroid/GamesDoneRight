@@ -6,7 +6,7 @@ import GlobalFooter from './footer/footer'
 import Modal from './modal/modal';
 import NavbarContainer from './navbar/navbar_container';
 import WishlistContainer from './wishlist/wishlist_container';
-
+import CartItemsContainer from './cart_items/cart_items_container';
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -19,6 +19,7 @@ const App = () => (
       <Route exact path="/" component={StorefrontContainer} />
       <Route path="/games/:gameId" component={GamePage} />
       <Route path="/wishlists" component={WishlistContainer} />
+      <Route path="/cart_items" component={CartItemsContainer} />
     </Switch>
     <GlobalFooter />
   </div>
