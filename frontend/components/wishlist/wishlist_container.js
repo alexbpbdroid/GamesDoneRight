@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { fetchGames } from '../../actions/game_actions';
 import WishlistPage from './wishlist_page';
 import { fetchWishlists, deleteWishlist } from '../../actions/wishlist_actions';
