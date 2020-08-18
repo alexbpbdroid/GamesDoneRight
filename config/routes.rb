@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     resources :reviews
     resources :cart_items, only: [:index, :create, :destroy]
     resources :wishlists, only: [:index, :show, :create, :update, :destroy]
+    resources :carts, only: [:index, :show, :create, :update, :destroy]
   end  
 end
