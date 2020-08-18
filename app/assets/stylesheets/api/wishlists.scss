@@ -28,10 +28,9 @@
   display: flex;
   justify-content: space-between;
   font-weight: normal;
-  background: rgb(225,225,225);
+  background: #e1e1e1;
   height: 60px;
-  padding-right: 10px;
-  border-bottom: 1px solid lightgray
+  width: 100%;
 }
 
 .wishlist-single-game:hover {
@@ -39,9 +38,13 @@
   background: rgb(235, 235, 235);
 }
 
-.wishlist-single-game:hover > .wishlist-delete-price > .wishlist-price {
+.wishlist-single-game-outer:hover > .wishlist-delete-price > .wishlist-price {
   color: white;
   background-image: linear-gradient(-180deg, #9fbf00, #80ab00 91%); 
+}
+
+.wishlist-single-game-outer:hover > .wishlist-delete-price {
+  background: rgb(235, 235, 235);
 }
 
 .wishlist-title {
@@ -57,7 +60,13 @@
   align-items: center;
   color: #686868;
   justify-content: space-between;
-  width: 92px;
+  width: 105px;
+  height: 60px;
+  padding-right: 15px;
+}
+
+#wishlist-delete-price-id:hover > .wishlist-single-game {
+  background: rgb(235, 235, 235);
 }
 
 #wishlist-delete-btn {
@@ -110,7 +119,7 @@
 
 .delete-wishlist-btn, .add-wishlist-btn, .add-wishlist-btn:active, .delete-wishlist-btn:active {
   border: none;
-  background:none;
+  background: none;
   cursor: pointer;
   outline: 0;
 }
@@ -132,4 +141,11 @@
   align-items: center;
   justify-content: center;
   font-size: 14px;
+}
+
+.wishlist-single-game-outer {
+  display: flex;
+  align-items: center;
+  background: #e1e1e1;
+  border-bottom: 1px solid lightgray;
 }
