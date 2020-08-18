@@ -1,3 +1,173 @@
-// Place all the styles related to the api/carts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.cart-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-header {
+  height: 51px;
+  display: flex;
+  align-items: center;
+  width: 1096px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.cart-inner {
+  width: 1096px;
+  height: 650px;
+  font-size: 14px;
+  color: #262626;
+  font-weight: bold;
+}
+
+.cart-games {
+  font-size: 13px;
+  // box-shadow: 0 1px 5px rgba(0,0,0,.15);
+  border-radius: 1px;
+  width: 600px;
+}
+
+.cart-single-game {
+  display: flex;
+  justify-content: space-between;
+  font-weight: normal;
+  background: #e1e1e1;
+  height: 60px;
+  width: 100%;
+}
+
+.cart-single-game-outer:hover > .cart-delete-price {
+  background: rgb(235, 235, 235);
+}
+
+.cart-title {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-indent: 20px;
+  color: black;
+}
+
+.cart-delete-price {
+  display: flex;
+  align-items: center;
+  color: #686868;
+  justify-content: space-between;
+  height: 60px;
+  padding-right: 15px;
+}
+
+#cart-delete-price-id:hover > .cart-single-game {
+  background: rgb(235, 235, 235);
+}
+
+#cart-delete-btn {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 25px;
+  height: 25px;
+  color: #686868;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px -1px rgba(0,0,0,.25);
+  background: #DEDEDE;
+  font-weight: 600;
+  font-family: Arial;
+}
+
+#cart-delete-btn:hover {
+  cursor: pointer;
+  background: rgb(199, 199, 199);
+}
+
+.cart-price {
+  border-radius: 3px;
+  width: 57px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.cart-thumbnail-title {
+  display: flex;
+}
+
+.cart-thumbnail {
+  height: 60px;
+  width: 106px;
+}
+
+.cart-status {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-cart-btn, .add-cart-btn, .add-cart-btn:active, .delete-cart-btn:active {
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: 0;
+}
+
+.cart-single-game-outer {
+  display: flex;
+  align-items: center;
+  background: #e1e1e1;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+
+#cart-delete-price-id:hover {
+  background: none;
+}
+
+.cart-total {
+  height: 60px;
+  width: 600px;
+  background: #E1E1E1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: 400;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+
+.cart-total-price {
+  margin-right: 23px;
+  width: 145px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-your-order {
+  width: 600px;
+  height: 100%;
+  border-bottom: 1px solid #b9b9b9;
+  display: flex;
+  align-items: center;
+}
+
+.cart-payment {
+  width: 400px;
+  height: 100%;
+  border-bottom: 1px solid #b9b9b9;
+  display: flex;
+  align-items: center;
+}
+
+.cart-payment-form {
+  width: 400px;
+  background: #E1E1E1;
+  height: 600px;
+}
+
+.cart-and-payment {
+  display: flex;
+  justify-content: space-between;
+}

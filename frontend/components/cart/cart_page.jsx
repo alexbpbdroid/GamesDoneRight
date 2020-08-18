@@ -36,30 +36,45 @@ class CartPage extends React.Component {
     let gameIds = userCart.map((cart) => cart.game_id)
     let games = Object.values(this.props.games)
       .filter((game) => gameIds.includes(game.id))
+    let totalPrice = 0
+
+    games.forEach((game) => {
+      totalPrice += game.price
+    })
   
     return (
       <div className="cart-outer">
         <div className="cart-inner">
-          <div className="cart-header">YOU HAVE ( {games.length} ) ITEMS IN YOUR SHOPPING CART</div>
-          <div className="cart-games">
-            {games.map((game) => (
-              <>
-                <Link to={`/games/${game.id}`} className="cart-single-game" key={game.id}>
-                  <div className="cart-thumbnail-title">
-                    <img className="cart-thumbnail" src={game.photoUrls[2]} alt=""/>
-                    <div className="cart-title">{game.title}</div>
-                  </div>
-                  <div className="cart-delete-price">
+          <div className="cart-header">
+            <div className="cart-your-order">YOUR ORDER</div><div className="cart-payment">PAYMENT</div>
+          </div>
+          <div className="cart-and-payment">
+            <div className="cart-games">
+              {games.map((game) => (
+                <div className="cart-single-game-outer" key={game.id}>
+                  <div className="cart-single-game">
+                    <div className="cart-thumbnail-title">
+                      <img className="cart-thumbnail" src={game.photoUrls[2]} alt=""/>
+                      <div className="cart-title">{game.title}</div>
+                    </div>
+                  <div id="cart-delete-price-id" className="cart-delete-price">
+                    <button id="cart-delete-btn" onClick={() =>
+                      this.props.deleteCart(userCart.find((cart) =>
+                        cart.game_id === game.id).id)}
+                    >x
+                    </button>
                     <div className="cart-price">$ {game.price}</div>
                   </div>
-                </Link>
-                <button id="cart-delete-btn" onClick={() =>
-                  this.props.deleteCart(userCart.find((cart) =>
-                    cart.game_id === game.id).id)}
-                >x
-                </button>
-              </>
-            ))}
+                  </div>
+                </div>
+              ))}
+              <div className="cart-total">
+                <div className="cart-total-price"><div>ORDER TOTAL :</div><div>$ {totalPrice}</div></div>
+              </div>
+            </div>
+            <div className="cart-payment-form">
+
+            </div>
           </div>
         </div>
       </div>
