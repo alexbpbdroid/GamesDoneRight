@@ -73,7 +73,35 @@ class CartPage extends React.Component {
               </div>
             </div>
             <div className="cart-payment-form">
-
+              <form action="">
+                <label for="fname">Accepted Cards</label>
+                <div className="cart-form-icons">
+                  <i class="fa fa-cc-visa" ></i>
+                  <i class="fa fa-cc-amex" ></i>
+                  <i class="fa fa-cc-mastercard" ></i>
+                  <i class="fa fa-cc-discover" ></i>
+                </div>
+                <div className="cart-cc-number">
+                  Card Number
+                  <input type="text" placeholder="1234 5678 9012 3456" />
+                </div>
+                <div className="cart-expiry-date-cvc">
+                  <div className="cart-expiry">
+                    Expiry date
+                    <input type="text" placeholder="MM / YY"/>
+                  </div>
+                  <div className="cart-cvc">
+                    CVC / CVV
+                    <input type="text" placeholder="123"/>
+                  </div>
+                </div>
+                <div className="cart-form-total-btn">
+                  <div className="cart-form-total">$ {totalPrice}</div>
+                  <div className="cart-form-btn">
+                    <button>PAY FOR YOUR ORDER NOW</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

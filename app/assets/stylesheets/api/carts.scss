@@ -128,7 +128,7 @@
 
 .cart-total {
   height: 60px;
-  width: 600px;
+  width: 599px;
   background: #E1E1E1;
   display: flex;
   justify-content: flex-end;
@@ -165,9 +165,33 @@
   width: 400px;
   background: #E1E1E1;
   height: 600px;
+  border: 1px solid lightgray;
 }
 
 .cart-and-payment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-form-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+}
+
+.cart-cc-number {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+}
+
+.cart-expiry-date-cvc {
+  display: flex;
+}
+
+.cart-form-total-btn {
   display: flex;
   justify-content: space-between;
 }
