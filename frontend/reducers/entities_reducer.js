@@ -3,14 +3,14 @@ import reviewsReducer from './reviews_reducer'
 import usersReducer from './users_reducer'
 import gamesReducer from './games_reducer'
 import wishlistsReducer from './wishlists_reducer'
-import cartItemsReducer from './cart_items_reducer'
+import cartsReducer from './carts_reducer';
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
   games: gamesReducer,
   reviews: reviewsReducer,
   wishlists: wishlistsReducer,
-  cartItems: cartItemsReducer
+  carts: cartsReducer
 })
 
 export default entitiesReducer

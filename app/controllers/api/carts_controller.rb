@@ -1,6 +1,6 @@
 class Api::CartsController < ApplicationController
   def index
-    @carts = Carts.all 
+    @carts = Cart.all 
     render :index
   end
 

@@ -25,7 +25,7 @@ class CartPage extends React.Component {
         </div>
       )
     }
-    
+
     if(!this.props.games || !this.props.carts) {
       return null;
     }
@@ -43,20 +43,22 @@ class CartPage extends React.Component {
           <div className="cart-header">YOU HAVE ( {games.length} ) ITEMS IN YOUR SHOPPING CART</div>
           <div className="cart-games">
             {games.map((game) => (
-              <Link to={`/games/${game.id}`} className="cart-single-game" key={game.id}>
-                <div className="cart-thumbnail-title">
-                  <img className="cart-thumbnail" src={game.photoUrls[2]} alt=""/>
-                  <div className="cart-title">{game.title}</div>
-                </div>
-                <div className="cart-delete-price">
-                  <button id="cart-delete-btn" onClick={() => 
-                    this.props.deleteCart(userCart.find((cart) => 
-                      cart.game_id === game.id).id)}
-                  >x
-                  </button>
-                  <div className="cart-price">$ {game.price}</div>
-                </div>
-              </Link>
+              <>
+                <Link to={`/games/${game.id}`} className="cart-single-game" key={game.id}>
+                  <div className="cart-thumbnail-title">
+                    <img className="cart-thumbnail" src={game.photoUrls[2]} alt=""/>
+                    <div className="cart-title">{game.title}</div>
+                  </div>
+                  <div className="cart-delete-price">
+                    <div className="cart-price">$ {game.price}</div>
+                  </div>
+                </Link>
+                <button id="cart-delete-btn" onClick={() =>
+                  this.props.deleteCart(userCart.find((cart) =>
+                    cart.game_id === game.id).id)}
+                >x
+                </button>
+              </>
             ))}
           </div>
         </div>

@@ -5,7 +5,7 @@ export const RECEIVE_CART = "RECEIVE_CART";
 export const REMOVE_CART = "REMOVE_CART";
 
 const receiveCarts = (carts) => ({
-  type: RECEIVE_CART,
+  type: RECEIVE_CARTS,
   carts
 })
 
