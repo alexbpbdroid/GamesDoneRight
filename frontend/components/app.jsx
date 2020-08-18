@@ -6,6 +6,7 @@ import GlobalFooter from './footer/footer'
 import Modal from './modal/modal';
 import NavbarContainer from './navbar/navbar_container';
 import WishlistContainer from './wishlist/wishlist_container';
+import CartPageContainer from './cart/cart_container';
 
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
 

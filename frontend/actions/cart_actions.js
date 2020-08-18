@@ -4,7 +4,7 @@ export const RECEIVE_CARTS = "RECEIVE_CARTS";
 export const RECEIVE_CART = "RECEIVE_CART";
 export const REMOVE_CART = "REMOVE_CART";
 
-const receiveCart = (carts) => ({
+const receiveCarts = (carts) => ({
   type: RECEIVE_CART,
   carts
 })
