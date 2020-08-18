@@ -9,7 +9,7 @@ class Api::CartsController < ApplicationController
   end
 
   def create
-    @cart = Cart.find(cart_params)
+    @cart = Cart.new(cart_params)
     @cart.user_id = current_user.id
     if @cart.save
       render :show

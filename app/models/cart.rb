@@ -10,8 +10,8 @@
 #  updated_at :datetime         not null
 #
 class Cart < ApplicationRecord
-  validates: game_id, :user_id, presence: true
-  validates: saved, inclusion: {in: [true, false]}
+  validates :game_id, :user_id, presence: true
+  validates :saved, inclusion: {in: [true, false]}
 
   belongs_to :user,
     foreign_key: :user_id
