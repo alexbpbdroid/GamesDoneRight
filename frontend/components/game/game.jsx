@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewIndexContainer from '../reviews/review_index_container';
+import { Link } from 'react-router-dom'
 
 
 class GamePage extends React.Component {
@@ -10,29 +11,42 @@ class GamePage extends React.Component {
   componentDidMount() {
     this.props.fetchGame(this.props.match.params.gameId);
     this.props.fetchWishlists();
+    this.props.fetchCarts();
     window.scrollTo(0, 0);
   }
   
   render () {
     
-    let game = this.props.game
+    let game = this.props.game;
+
     if (!game) {
       return null;
     } else if (!this.props.wishlists) {
       return null;
+    } else if (!this.props.carts) {
+      return null;
     }
+
     let wishlistBtn;
-    const { currentUser, wishlists } = this.props;
+    let cartBtn;
+    const { currentUser, wishlists, carts } = this.props;
     let userWishlists;
-    let login = <div></div>
+    let userCarts;
+    let login = <div></div>;
+
     if (!currentUser) { 
       userWishlists = [];
+      userCarts = [];
     } else {
-      userWishlists = Object.values(wishlists).filter((wishlist) => wishlist.user_id === currentUser.id)
+      userWishlists = Object.values(wishlists).filter((wishlist) => wishlist.user_id === currentUser.id);
+      userCarts = Object.values(carts).filter((cart) => cart.user_id === currentUser.id);
     }
+
     let thisWishlist = userWishlists.find((wishlist) => wishlist.game_id === game.id);
-    let gameIds = userWishlists.map((wishlist) => wishlist.game_id);
-    if (!gameIds.includes(game.id) && currentUser) {
+    let wishGameIds = userWishlists.map((wishlist) => wishlist.game_id);
+    let cartGameIds = userCarts.map((cart) => cart.game_id);
+
+    if (!wishGameIds.includes(game.id) && currentUser) {
       wishlistBtn = (
         <div className="unsaved-wishlist">
           <button className="add-wishlist-btn" onClick={() => this.props.createWishlist({
@@ -61,6 +75,35 @@ class GamePage extends React.Component {
       )
     }
 
+    if (!cartGameIds.includes(game.id) && currentUser) {
+      cartBtn = (
+        <div className="unsaved-cart">
+          <button className="big-purchase-button" onClick={() => this.props.createCart({
+            game_id: game.id,
+            saved: false
+          })}>
+          Add to cart
+          </button> 
+        </div> 
+      )
+    } else if (!currentUser) {
+      cartBtn = (
+        <div className="unsaved-cart">
+          <button className="big-purchase-button" onClick={() => this.props.openModal("login")}>
+          Add to cart
+          </button> 
+        </div>
+      )
+    } else {
+      cartBtn = (
+        <Link to="/carts" className="saved-cart">
+          <button className="big-purchase-button">
+          In cart, proceed to checkout
+          </button>
+        </Link>
+      )
+    }
+
     return (
       <>
         <div className="show-header-outer">
@@ -76,7 +119,8 @@ class GamePage extends React.Component {
             <div className="price-box">
               $&nbsp;{game.price}
               <br/>
-              <button className="big-purchase-button">Add to cart</button>        
+              {/* <button className="big-purchase-button">Add to cart</button>         */}
+              <center className="cart-text">{cartBtn}</center>
               <center className="wishlist-text">{wishlistBtn}</center>
             </div>
           </div>
