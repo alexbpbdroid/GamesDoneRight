@@ -9,9 +9,18 @@ const Navbar = ({ currentUser, logout, openModal }) => {
       <nav className="navbar">
         <div className="centered-nav">
           <div className="middle-navbar-links">
-            <Link to="/"><img id="gdr-small-logo" src={window.gdrLogoURL} className="logo-icon" /></Link>
-            <div className="nav-store-link"><Link className="nav-store-text" to="/">STORE</Link></div>
-            ABOUT&nbsp;<img src={window.arrowURL} className="arrow-icon" />
+            <Link to="/"><div className="nav-logo-container"><img id="gdr-small-logo" src={window.gdrLogoURL} className="logo-icon" /></div></Link>
+
+            <Link id="nav-store-text" className="nav-store-text" to="/">STORE</Link>
+            <div className="about-dropdown">
+              <div className="sign-in-drop-text">ABOUT &nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
+              <div className="about-dropdown-content" id="about-drop">
+                <div className="nav-about-icons">
+                  <i className="fab fa-github-square"></i><i className="fab fa-linkedin"></i><i className="fas fa-user-circle"></i>
+                </div>
+              </div>
+            </div>
+
             <div className="dropdown">
               <div className="sign-in-drop-text">SIGN IN &nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
               <div className="dropdown-content" id="sign-in-drop">
@@ -30,7 +39,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
           <div className="cart-search-outer">
             <div className="cart-search">
               <Search />
-              <span id="cart-icon" className="material-icons">shopping_cart</span>
+              <Link to="/carts"><span id="cart-icon" className="material-icons">shopping_cart</span></Link>
             </div>
           </div>
         </div>
@@ -44,9 +53,18 @@ const Navbar = ({ currentUser, logout, openModal }) => {
       <nav className="navbar">
         <div className="centered-nav">    
           <div className="middle-navbar-links">
-            <Link to="/"><img id="gdr-small-logo" src={window.gdrLogoURL} className="logo-icon" /></Link>
-            <div className="nav-store-link"><Link className="nav-store-text" to="/">STORE</Link></div>
-            ABOUT&nbsp;<img src={window.arrowURL} className="arrow-icon" />
+            <Link to="/"><div className="nav-logo-container"><img id="gdr-small-logo" src={window.gdrLogoURL} className="logo-icon" /></div></Link>
+
+            <Link id="nav-store-text" className="nav-store-text" to="/">STORE</Link>
+            <div className="about-dropdown">
+              <div className="sign-in-drop-text">ABOUT &nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
+              <div className="about-dropdown-content" id="about-drop">
+                <div className="nav-about-icons">
+                  <div><i class="fab fa-github-square"></i></div><div><i className="fab fa-linkedin"></i></div><div><i className="fas fa-user-circle"></i></div>
+                </div>
+              </div>
+            </div>
+
             <div className="user-dropdown">
               <div className="user-dropdown-link">{currentUser.username}&nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>            
               <div className="user-dropdown-content" id="user-menu-drop">

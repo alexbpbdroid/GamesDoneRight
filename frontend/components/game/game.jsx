@@ -125,7 +125,7 @@ class GamePage extends React.Component {
             </div>
           </div>
         </div>
-        <br/>
+        <br/><br/>
         <div className="game-title-outer">
           <div className="game-title-text">
             <h1>{game.title}</h1>

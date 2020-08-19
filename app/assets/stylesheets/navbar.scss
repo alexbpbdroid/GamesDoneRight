@@ -27,7 +27,9 @@
   color: #d8d8d8;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
-  font-size: 14px; 
+  font-size: 14px;
+  justify-content: space-between;
+  min-width: 430px; 
 }
 
 .middle-navbar-links > a:visited {
@@ -64,17 +66,35 @@
   cursor: default; 
 }
 
+.about-dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: default; 
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
-  z-index: 1;
-  
+  z-index: 1; 
+}
+
+.about-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  z-index: 1; 
 }
 
 .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.about-dropdown:hover .about-dropdown-content {
   display: block;
 }
 
@@ -85,13 +105,22 @@
   line-height: normal;
 }
 
+#about-drop {
+  left: -172px;
+  width: 400px;
+  color: gray;
+  line-height: normal;
+}
+
 .user-dropdown-link {
   text-transform: uppercase;
   text-decoration: none;
   color: #de8ae5;
   height: 52px;
+  width: 120px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .user-dropdown-link:hover {
@@ -129,7 +158,7 @@
 }
 
 #user-menu-drop {
-  left: -75px;
+  left: -59px;
   width: 230px;
   color: black;
   line-height: normal;
@@ -259,9 +288,10 @@
 .sign-in-drop-text {
   color: #de8ae5;
   height: 52px;
+  width: 120px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: 70px;
 }
 
 .sign-in-drop-text:hover {
@@ -270,7 +300,6 @@
 
 #gdr-small-logo {
   border-radius: 4px;
-  margin-right: 45px;
 }
 
 .wishlist-link:hover {
@@ -292,11 +321,25 @@
 }
 
 .nav-store-link {
-  padding-right: 45px;
+  height: 52px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-store-text {
-  color: #D8D8D8
+  height: 52px;
+  display: flex;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-store-text {
+  color: #de8ae5;
+}
+
+#nav-store-text:hover {
+  color: #F8B1FE;
 }
 
 .wishlist-link {
@@ -309,4 +352,31 @@
 
 .sign-out-link {
   border-top: 1px solid darkgray
+}
+
+.nav-about-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fa-github-square {
+  font-size: 30px;
+  color: black;
+}
+
+.fa-linkedin {
+  font-size: 30px;
+  color: black;
+}
+
+.fa-user-circle {
+  font-size: 30px;
+  color: black;
+}
+
+.nav-logo-container {
+  height: 52px;
+  display: flex;
+  align-items: center;
 }

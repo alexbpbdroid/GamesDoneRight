@@ -4,7 +4,7 @@ const GlobalFooter = () => (
   <div className='global-footer'>
     <div className='upper-footer'>
       <div className="upper-footer-content">
-        <div>Placeholder Link &nbsp;&nbsp;&nbsp; Placeholder Link &nbsp;&nbsp;&nbsp; Placeholder Link &nbsp;&nbsp;&nbsp; Placeholder Link &nbsp;&nbsp;&nbsp; Placeholder Link &nbsp;&nbsp;&nbsp; Placeholder Link</div>
+        <div>Placeholder Links</div>
       </div>
     </div>
 
