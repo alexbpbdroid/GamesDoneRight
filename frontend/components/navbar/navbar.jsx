@@ -60,6 +60,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                     </div>                  
                 </div>
                 <br/>
+                <Link to="/carts"><div id="user-dropdown-links" className="cart-link">Shopping Cart</div></Link>
                 <Link to="/wishlists"><div id="user-dropdown-links" className="wishlist-link">Wishlist</div></Link>
                 <div id="user-dropdown-links" className="sign-out-link" onClick={logout}>Sign Out</div>
               </div>
@@ -68,7 +69,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
           <div className="cart-search-outer">
             <div className="cart-search">
               <Search />
-              <span id="cart-icon" className="material-icons">shopping_cart</span>
+              <Link to="/carts"><span id="cart-icon" className="material-icons">shopping_cart</span></Link>
             </div>
           </div>
         </div>

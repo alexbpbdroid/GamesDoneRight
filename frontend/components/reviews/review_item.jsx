@@ -55,8 +55,9 @@ class ReviewItem extends React.Component {
                 <div className="review-icon"><span style={{color: usernameToColor(review.username)}} id="review-profile-icon" className="material-icons">account_circle</span></div>
                 <div className="review-username">{review.username}</div>
               </div>
-              <div className="review-body">{review.body}
-                <div>{buttons}</div>
+              <div className="review-body">
+                <div className="review-body-text">{review.body}</div>
+                <div className="review-body-buttons">{buttons}</div>
               </div>
             </div>
             
