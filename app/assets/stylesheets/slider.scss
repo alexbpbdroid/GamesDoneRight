@@ -61,3 +61,24 @@
   right: 0;
   @extend %btn-styles;
 }
+
+.slider-price {
+  width: 190px;
+  height: 50px;
+  border: 1px solid #96bd27;
+  border-bottom-color: #69941b;
+  border-left-color: #7fa721;
+  border-right-color: #7fa721;
+  color: #fff;
+  background: linear-gradient(-180deg,#c1ec51,#80b02a);
+  font-size: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  z-index: 3;
+  position: absolute;
+  bottom: 125px;
+  right: 75px;
+  text-align: center;
+  box-shadow: 0 0 28px 8px rgba(0,0,0,.19), 0 1px 5px 0 rgba(0,0,0,.5);
+}
