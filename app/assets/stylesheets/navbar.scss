@@ -277,6 +277,10 @@
   background-color: lightgray
 }
 
+.cart-link:hover {
+  background: lightgray;
+}
+
 #user-dropdown-links {
   height: 50px;
   display: flex;
@@ -297,4 +301,12 @@
 
 .wishlist-link {
   color: black;
+}
+
+.cart-link {
+  color: black;
+}
+
+.sign-out-link {
+  border-top: 1px solid darkgray
 }
