@@ -23,9 +23,9 @@
 
 .cart-games {
   font-size: 13px;
-  // box-shadow: 0 1px 5px rgba(0,0,0,.15);
   border-radius: 1px;
   width: 600px;
+  border-top: 1px solid darkgray;
 }
 
 .cart-single-game {
@@ -119,7 +119,8 @@
   align-items: center;
   background: #e1e1e1;
   border-bottom: 1px solid lightgray;
-  border-right: 1px solid lightgray;
+  border-right: 1px solid darkgray;
+  border-left: 1px solid darkgray;
 }
 
 #cart-delete-price-id:hover {
@@ -128,14 +129,15 @@
 
 .cart-total {
   height: 60px;
-  width: 599px;
+  width: 598px;
   background: #E1E1E1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   font-weight: 400;
-  border-bottom: 1px solid lightgray;
-  border-right: 1px solid lightgray;
+  border-bottom: 1px solid darkgray;
+  border-right: 1px solid darkgray;
+  border-left: 1px solid darkgray;
 }
 
 .cart-total-price {
@@ -164,8 +166,11 @@
 .cart-payment-form {
   width: 400px;
   background: #E1E1E1;
-  height: 600px;
   border: 1px solid lightgray;
+  font-size: 14px;
+  font-weight: 400;
+  box-shadow: 0 1px 5px rgba(0,0,0,.15);
+  border: 1px solid darkgray;
 }
 
 .cart-and-payment {
@@ -177,14 +182,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100px;
+  width: 210px;
   height: 30px;
-}
-
-.cart-cc-number {
-  display: flex;
-  flex-direction: column;
-  height: 50px;
+  font-size: 30px;
+  margin-top: 10px;
 }
 
 .cart-expiry-date-cvc {
@@ -194,4 +195,101 @@
 .cart-form-total-btn {
   display: flex;
   justify-content: space-between;
+  margin: 15px;
+  align-items: center;
 }
+
+.cart-cc-input-box {
+  text-indent: 15px;
+  width: 360px;
+  height: 36px;
+  padding: 0;
+}
+
+.cart-cc-number{
+  background: #D7D7D7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+  margin: 0px 15px 15px 15px;
+} 
+.cart-expiry-date-cvc {
+  height: 70px;
+  background: #D7D7D7;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.cart-pay-btn {
+  background: linear-gradient(180deg, #9fbf00, #80ab00);
+  color: #fff;
+  outline: none;
+  border: 1px solid darkgray;
+  height: 35px;
+  border-radius: 3px;
+}
+
+.accepted-and-cc-icons {
+  margin: 15px;
+}
+
+.cart-cc-outer {
+  background: #D7D7D7;
+  border-top: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+}
+
+.cart-expiry-box {
+  text-indent: 15px;
+  height: 36px;
+  padding: 0;
+}
+
+.cart-cvc-box {
+  text-indent: 15px;
+  height: 36px;
+  padding: 0;
+}
+
+#visa {
+  color: navy;
+}
+
+#amex {
+  color: blue;
+}
+
+#mastercard {
+  color: red;
+}
+
+#discover {
+  color: orange;
+}
+
+.cc-label, .exp-label, .cvc-label {
+  margin-bottom: 10px;
+}
+
+.cart-cvc {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-expiry {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-pay-btn:hover {
+  background-image: linear-gradient(-180deg, #aed100, #91c200 80%);
+}
+
+.cart-form-total {
+  font-size: 20px
+}
+
+
+
