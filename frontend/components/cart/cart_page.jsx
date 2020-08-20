@@ -69,7 +69,7 @@ class CartPage extends React.Component {
                 </div>
               ))}
               <div className="cart-total">
-                <div className="cart-total-price"><div>ORDER TOTAL :</div><div>$ {totalPrice}</div></div>
+                <div className="cart-total-price"><div>ORDER TOTAL :</div><div>$ {totalPrice.toFixed(2)}</div></div>
               </div>
             </div>
             <div className="cart-payment-form">
@@ -77,10 +77,10 @@ class CartPage extends React.Component {
                 <div className="accepted-and-cc-icons">
                   <label>Accepted Cards</label>
                   <div className="cart-form-icons">
-                    <i id="visa" class="fa fa-cc-visa" ></i>
-                    <i id="amex" class="fa fa-cc-amex" ></i>
-                    <i id="mastercard" class="fa fa-cc-mastercard" ></i>
-                    <i id="discover" class="fa fa-cc-discover" ></i>
+                    <i id="visa" className="fa fa-cc-visa" ></i>
+                    <i id="amex" className="fa fa-cc-amex" ></i>
+                    <i id="mastercard" className="fa fa-cc-mastercard" ></i>
+                    <i id="discover" className="fa fa-cc-discover" ></i>
                   </div>
                 </div>
                 <div className="cart-cc-outer">
@@ -100,7 +100,7 @@ class CartPage extends React.Component {
                   </div>
                 </div>
                 <div className="cart-form-total-btn">
-                  <div className="cart-form-total">$ {totalPrice}</div>
+                  <div className="cart-form-total">$ {totalPrice.toFixed(2)}</div>
                   <div className="cart-form-btn">
                     <button className="cart-pay-btn">PAY FOR YOUR ORDER NOW</button>
                   </div>
