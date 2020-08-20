@@ -76,3 +76,19 @@
 .purple-text {
   color: #DA8BF0
 }
+
+.footer-icons {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer-git, #footer-linkedin, #footer-personal {
+  color: #959595;
+}
+#footer-git:hover, #footer-linkedin:hover, #footer-personal:hover {
+  color: white;
+  cursor: pointer;
+}
+

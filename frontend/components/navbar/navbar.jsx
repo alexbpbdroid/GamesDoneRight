@@ -16,9 +16,9 @@ const Navbar = ({ currentUser, logout, openModal }) => {
               <div className="sign-in-drop-text">ABOUT &nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
               <div className="about-dropdown-content" id="about-drop">
                 <div className="nav-about-icons">
-                  <div className="nav-about-single-icon" id="about-git"><i className="fab fa-github-square"></i></div>
-                  <div className="nav-about-single-icon" id="about-linkedin"><i className="fab fa-linkedin"></i></div>
-                  <div className="nav-about-single-icon" id="about-personal"><i className="fas fa-user-circle"></i></div>
+                  <a href="https://github.com/alexbpbdroid"><div className="nav-about-single-icon" id="about-git"><i className="fab fa-github-square"></i></div></a>
+                  <a href="https://www.linkedin.com/in/alex-daniel-7389071b1/"><div className="nav-about-single-icon" id="about-linkedin"><i className="fab fa-linkedin"></i></div></a>
+                  <a href="http://www.alexjdaniel.com/"><div className="nav-about-single-icon" id="about-personal"><i className="fas fa-user-circle"></i></div></a>
                 </div>
                 <div className="nav-about-body">
                   <div className="nav-about-body-text">
@@ -67,9 +67,9 @@ const Navbar = ({ currentUser, logout, openModal }) => {
               <div className="sign-in-drop-text">ABOUT &nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
               <div className="about-dropdown-content" id="about-drop">
                 <div className="nav-about-icons">
-                  <div className="nav-about-single-icon" id="about-git"><i className="fab fa-github-square"></i></div>
-                  <div className="nav-about-single-icon" id="about-linkedin"><i className="fab fa-linkedin"></i></div>
-                  <div className="nav-about-single-icon" id="about-personal"><i className="fas fa-user-circle"></i></div>
+                  <a href="https://github.com/alexbpbdroid"><div className="nav-about-single-icon" id="about-git"><i className="fab fa-github-square"></i></div></a>
+                  <a href="https://www.linkedin.com/in/alex-daniel-7389071b1/"><div className="nav-about-single-icon" id="about-linkedin"><i className="fab fa-linkedin"></i></div></a>
+                  <a href="http://www.alexjdaniel.com/"><div className="nav-about-single-icon" id="about-personal"><i className="fas fa-user-circle"></i></div></a>
                 </div>
                 <div className="nav-about-body">
                   <div className="nav-about-body-text">
