@@ -56,7 +56,7 @@ class ReviewForm extends React.Component {
               value={this.state.body}
               onChange={this.update('body')}
               placeholder="Leave a review" />            
-            <button type="submit">{this.props.formType}</button>
+            <button className="review-form-btn"type="submit">{this.props.formType}</button>
           </div>        
         </form>
       </div>
