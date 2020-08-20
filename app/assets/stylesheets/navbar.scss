@@ -294,7 +294,19 @@
   align-items: center;
 }
 
+.about-drop-text {
+  color: #d8d8d8;
+  height: 52px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sign-in-drop-text:hover {
+  color: #F8B1FE
+}
+.about-drop-text:hover {
   color: #F8B1FE
 }
 
@@ -333,10 +345,7 @@
   width: 120px;
   align-items: center;
   justify-content: center;
-}
-
-#nav-store-text {
-  color: #de8ae5;
+  color: d8d8d8
 }
 
 #nav-store-text:hover {
