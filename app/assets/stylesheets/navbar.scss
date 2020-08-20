@@ -99,14 +99,14 @@
 }
 
 #sign-in-drop {
-  left: -215px;
+  left: -193px;
   width: 500px;
   color: gray;
   line-height: normal;
 }
 
 #about-drop {
-  left: -172px;
+  left: -143px;
   width: 400px;
   color: gray;
   line-height: normal;
@@ -311,9 +311,10 @@
 }
 
 #user-dropdown-links {
-  height: 50px;
+  height: 40px;
   display: flex;
   align-items: center;
+  text-indent: 20px;
 }
 
 .modal-btn:hover {
@@ -343,11 +344,11 @@
 }
 
 .wishlist-link {
-  color: black;
+  color: #535353;
 }
 
 .cart-link {
-  color: black;
+  color: #535353;
 }
 
 .sign-out-link {
@@ -357,22 +358,52 @@
 .nav-about-icons {
   display: flex;
   align-items: center;
+  height: 50px;
   justify-content: space-around;
+  border-bottom: 1px solid darkgray;
+  background-color: #e9e9e9;
 }
 
 .fa-github-square {
   font-size: 30px;
-  color: black;
+  color: #4D2778;
+}
+
+#about-git:hover > .fa-github-square {
+  color: #6a4b8d;
+  cursor: pointer;
+}
+
+#about-git:hover {
+  cursor:pointer;
 }
 
 .fa-linkedin {
   font-size: 30px;
-  color: black;
+  color: #0074B2;
+}
+
+#about-linkedin:hover > .fa-linkedin {
+  color: #019ef3;
+  cursor: pointer;
+}
+
+#about-linkedin:hover {
+  cursor: pointer;
 }
 
 .fa-user-circle {
   font-size: 30px;
-  color: black;
+  color: #43B9AA;
+}
+
+#about-personal:hover > .fa-user-circle {
+  color: #068574;
+  cursor: pointer;
+}
+
+#about-personal:hover {
+  cursor: pointer;
 }
 
 .nav-logo-container {
@@ -380,3 +411,18 @@
   display: flex;
   align-items: center;
 }
+
+.nav-about-body-text {
+  margin: 23px;
+  color: #535353;
+  line-height: 1.5;
+}
+
+.nav-about-single-icon {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

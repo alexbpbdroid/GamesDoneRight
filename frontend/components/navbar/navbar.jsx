@@ -16,7 +16,14 @@ const Navbar = ({ currentUser, logout, openModal }) => {
               <div className="sign-in-drop-text">ABOUT &nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
               <div className="about-dropdown-content" id="about-drop">
                 <div className="nav-about-icons">
-                  <i className="fab fa-github-square"></i><i className="fab fa-linkedin"></i><i className="fas fa-user-circle"></i>
+                  <div className="nav-about-single-icon" id="about-git"><i className="fab fa-github-square"></i></div>
+                  <div className="nav-about-single-icon" id="about-linkedin"><i className="fab fa-linkedin"></i></div>
+                  <div className="nav-about-single-icon" id="about-personal"><i className="fas fa-user-circle"></i></div>
+                </div>
+                <div className="nav-about-body">
+                  <div className="nav-about-body-text">
+                    Thank you for visiting GameDoneRight, a website created by Alex Daniel.  This is a take on one of my favorite digital distribution platforms, GOG.com.
+                  </div>
                 </div>
               </div>
             </div>
@@ -60,7 +67,14 @@ const Navbar = ({ currentUser, logout, openModal }) => {
               <div className="sign-in-drop-text">ABOUT &nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
               <div className="about-dropdown-content" id="about-drop">
                 <div className="nav-about-icons">
-                  <div><i class="fab fa-github-square"></i></div><div><i className="fab fa-linkedin"></i></div><div><i className="fas fa-user-circle"></i></div>
+                  <div className="nav-about-single-icon" id="about-git"><i className="fab fa-github-square"></i></div>
+                  <div className="nav-about-single-icon" id="about-linkedin"><i className="fab fa-linkedin"></i></div>
+                  <div className="nav-about-single-icon" id="about-personal"><i className="fas fa-user-circle"></i></div>
+                </div>
+                <div className="nav-about-body">
+                  <div className="nav-about-body-text">
+                    Thank you for visiting GameDoneRight, a website created by Alex Daniel.  This is a take on one of my favorite digital distribution platforms, GOG.com.
+                  </div>
                 </div>
               </div>
             </div>
@@ -77,7 +91,6 @@ const Navbar = ({ currentUser, logout, openModal }) => {
                       </div>
                     </div>                  
                 </div>
-                <br/>
                 <Link to="/carts"><div id="user-dropdown-links" className="cart-link">Shopping Cart</div></Link>
                 <Link to="/wishlists"><div id="user-dropdown-links" className="wishlist-link">Wishlist</div></Link>
                 <div id="user-dropdown-links" className="sign-out-link" onClick={logout}>Sign Out</div>
