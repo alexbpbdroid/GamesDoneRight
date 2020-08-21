@@ -102,7 +102,8 @@ class CartPage extends React.Component {
                 <div className="cart-form-total-btn">
                   <div className="cart-form-total">$ {totalPrice.toFixed(2)}</div>
                   <div className="cart-form-btn">
-                    <button className="cart-pay-btn">PAY FOR YOUR ORDER NOW</button>
+                    <button className="cart-pay-btn" onClick={() =>
+                      this.props.deleteCart("all")}>PAY FOR YOUR ORDER NOW</button>
                   </div>
                 </div>
               </form>

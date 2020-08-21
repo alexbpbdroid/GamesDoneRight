@@ -28,11 +28,17 @@ class Api::CartsController < ApplicationController
   end
 
   def destroy
-    @cart = Cart.find(params[:id])
-    if @cart
-      @cart.destroy
+    if params[:id] == "all"
+      @cart = current_user.carts
+    else
+      @cart = Cart.where(id: params[:id])
     end
-    render :show
+    if @cart
+      @cart.destroy_all
+      render json: ["Successfully removed"]
+    else
+      render json: ["Failed to remove"], status: 400
+    end
   end
 
   private

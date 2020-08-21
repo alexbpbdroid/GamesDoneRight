@@ -22,12 +22,8 @@ class User < ApplicationRecord
   has_many :reviews,
     foreign_key: :author_id
 
-  has_many :cart_items,
+  has_many :carts,
     foreign_key: :user_id
-
-  has_many :cart_games,
-    through: :cart_items,
-    source: :game
   
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
