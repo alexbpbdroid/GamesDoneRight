@@ -53,10 +53,10 @@ class CartPage extends React.Component {
               {games.map((game) => (
                 <div className="cart-single-game-outer" key={game.id}>
                   <div className="cart-single-game">
-                    <div className="cart-thumbnail-title">
+                    <Link to={`/games/${game.id}`} className="cart-thumbnail-title">
                       <img className="cart-thumbnail" src={game.photoUrls[2]} alt=""/>
                       <div className="cart-title">{game.title}</div>
-                    </div>
+                    </Link>
                   <div id="cart-delete-price-id" className="cart-delete-price">
                     <button id="cart-delete-btn" onClick={() =>
                       this.props.deleteCart(userCart.find((cart) =>

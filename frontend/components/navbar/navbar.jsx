@@ -64,7 +64,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
 
             <Link id="nav-store-text" className="nav-store-text" to="/">STORE</Link>
             <div className="about-dropdown">
-              <div className="sign-in-drop-text">ABOUT &nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
+              <div className="about-drop-text">ABOUT &nbsp;<img src={window.arrowURL} className="sign-in-arrow" /></div>
               <div className="about-dropdown-content" id="about-drop">
                 <div className="nav-about-icons">
                   <a href="https://github.com/alexbpbdroid"><div className="nav-about-single-icon" id="about-git"><i className="fab fa-github-square"></i></div></a>
