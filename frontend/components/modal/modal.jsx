@@ -3,7 +3,8 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
-import VideoContainer from '../game/video_container'
+import VideoContainer from '../game/video_container';
+import CheckoutContainer from '../cart/checkout_container';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
@@ -11,6 +12,7 @@ function Modal({modal, closeModal}) {
   }
 
   let video = false;
+  let checkout = false;
   let component;
   switch (modal) {
     case 'login':
@@ -22,6 +24,10 @@ function Modal({modal, closeModal}) {
     case 'video':
       component = <VideoContainer />;
       video = true;
+      break;
+    case 'checkout':
+      component = <CheckoutContainer />;
+      checkout = true;
       break;
     default:
       return null;
@@ -37,12 +43,22 @@ function Modal({modal, closeModal}) {
                         {component}
                       </div>
                     </div>
+   
+  let checkoutReturn = <div className="checkout-background" onClick={closeModal}>
+                      <div className="checkout-child" onClick={e => e.stopPropagation()}>
+                        {component}
+                      </div>
+                    </div>
+   
 
   if (video){
     return videoReturn;
+  } else if (checkout) {
+    return checkoutReturn;
   } else {
     return authReturn;
-  }
+  } 
+        
 }
 
 const mapStateToProps = state => {

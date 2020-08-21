@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { fetchGames } from '../../actions/game_actions';
 import CartPage from './cart_page';
 import { fetchCarts, deleteCart } from '../../actions/cart_actions';
+import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -13,6 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    openModal: modal => dispatch(openModal(modal)),
     fetchGames: () => dispatch(fetchGames()),
     fetchCarts: () => dispatch(fetchCarts()),
     deleteCart: (cartId) => dispatch(deleteCart(cartId))

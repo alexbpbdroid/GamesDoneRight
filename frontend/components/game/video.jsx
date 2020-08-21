@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import game_container from './game_container';
 
 class Video extends React.Component {
   constructor(props) {

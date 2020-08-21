@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 class CartPage extends React.Component {
   constructor(props) {
     super(props);
+    this.deleteCart = this.deleteCart.bind(this);
   }
 
   componentDidMount() {
@@ -12,7 +13,9 @@ class CartPage extends React.Component {
   }
   
   deleteCart(cartId) {
-    this.props.deleteCart(cartId);
+    this.props.deleteCart(cartId)
+    // .then(() => this.props.openModal('checkout'))
+    // this.props.openModal('checkout')
   }
   
   render() {
@@ -46,7 +49,7 @@ class CartPage extends React.Component {
       <div className="cart-outer">
         <div className="cart-inner">
           <div className="cart-header">
-            <div className="cart-your-order">YOUR ORDER</div><div className="cart-payment">PAYMENT</div>
+            <div className="cart-your-order">YOUR ORDER ( {userCart.length} )</div><div className="cart-payment">PAYMENT</div>
           </div>
           <div className="cart-and-payment">
             <div className="cart-games">
@@ -103,7 +106,7 @@ class CartPage extends React.Component {
                   <div className="cart-form-total">$ {totalPrice.toFixed(2)}</div>
                   <div className="cart-form-btn">
                     <button className="cart-pay-btn" onClick={() =>
-                      this.props.deleteCart("all")}>PAY FOR YOUR ORDER NOW</button>
+                      this.deleteCart("all")}>PAY FOR YOUR ORDER NOW</button>
                   </div>
                 </div>
               </form>
