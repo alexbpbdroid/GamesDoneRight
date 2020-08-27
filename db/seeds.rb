@@ -27,14 +27,16 @@ daniel = User.create(
   password: 'password',
 )
 
-#note: games:
+### GAMES ###
+#------------------------------------------------------------------------------------------------------
+
+# Note:
 # photo[0] = show header
 # photo[1] = show description
 # photo[2] = thumbnail
 # photo[3] = card img
 # photo[4] = slider img
             
-
 #------------------------------------------------------------------------------------------------------
 
 ### CYBERPUNK 2077 ###

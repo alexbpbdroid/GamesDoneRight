@@ -112,6 +112,9 @@ class CartPage extends React.Component {
               </form>
             </div>
           </div>
+          <div className="cart-disclaimer">
+            <span>Note:  Information is neither saved nor used in any way</span>
+          </div>
         </div>
       </div>
     )
