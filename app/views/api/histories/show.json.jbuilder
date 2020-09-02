@@ -1,0 +1,1 @@
+json.extract! @history, :id, :user_id, :game_id, :saved
