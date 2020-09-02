@@ -1,7 +1,7 @@
 import { REMOVE_LIBRARY, RECEIVE_LIBRARY, RECEIVE_LIBRARIES } from '../actions/library_actions';
 
 const librariesReducer = (oldState = {}, action) => {
-  Object.freezse(oldState);
+  Object.freeze(oldState);
   let newState = Object.assign({}, oldState);
   switch(action.type) {
     case RECEIVE_LIBRARIES:
