@@ -14,7 +14,7 @@ export const createLibrary = (library) => {
   return $.ajax({
     url: '/api/libraries',
     method: 'POST',
-    data: { libraries }
+    data: { library }
   })
 }
 
@@ -29,6 +29,6 @@ export const updateLibrary = (library) => (
 export const deleteLibrary = (libraryId) => (
   $.ajax({
     url: `/api/libraries/${libraryId}`,
-    methnod: 'DELETE'
+    method: 'DELETE'
   })
 )
