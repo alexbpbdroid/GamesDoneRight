@@ -15,3 +15,5 @@ const historiesReducer = (oldState = {}, action) => {
       return oldState;
   }
 }
+
+export default historiesReducer;

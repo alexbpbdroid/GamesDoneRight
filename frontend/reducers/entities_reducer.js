@@ -5,6 +5,7 @@ import gamesReducer from './games_reducer'
 import wishlistsReducer from './wishlists_reducer'
 import cartsReducer from './carts_reducer';
 import librariesReducer from './libraries_reducer';
+import historiesReducer from './histories_reducer'
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
@@ -12,7 +13,8 @@ const entitiesReducer = combineReducers({
   reviews: reviewsReducer,
   wishlists: wishlistsReducer,
   carts: cartsReducer,
-  libraries: librariesReducer
+  libraries: librariesReducer,
+  histories: historiesReducer
 })
 
 export default entitiesReducer
