@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :wishlists, only: [:index, :show, :create, :update, :destroy]
     resources :carts, only: [:index, :show, :create, :update, :destroy]
     resources :libraries, only: [:index, :show, :create, :update, :destroy]
+    resources :histories, only: [:index, :show, :create, :update, :destroy]
   end  
 end
