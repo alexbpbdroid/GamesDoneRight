@@ -22,6 +22,13 @@ class LibraryPage extends React.Component {
       return null;
     }
 
+    const { currentUser, libraries } = this.props;
+    let userLibrary = Object.values(libraries)
+      .filter((library) => library.user_id === currentUser.id)
+    let gameIds = userLibrary.map((library) => library.game_id)
+    let games = Object.values(this.props.games)
+      .filter((game) => gameIds.includes(game.id))
+
   }
 }
 
