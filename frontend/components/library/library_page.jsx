@@ -29,6 +29,16 @@ class LibraryPage extends React.Component {
     let games = Object.values(this.props.games)
       .filter((game) => gameIds.includes(game.id))
 
+    return (
+      <div className="library-outer">
+        <div className="library-header">Games in your Library ( {games.length} )</div>
+        <div className="library-games">
+          {games.map((game) => (
+            <div>{game.title}</div>
+          ))}
+        </div>
+      </div>
+    )
   }
 }
 
