@@ -21,6 +21,13 @@ class HistoryPage extends React.Component {
     if (!this.props.games || !this.props.histories) {
       return null;
     }
+
+    const { currentUser, histories } = this.props;
+    let userHistory = Object.values(histories)
+      .filter((history) => history.user_id === currentUser.id)
+    let gameIds = userHistory.map((history) => history.game_id)
+    let games = Object.values(this.props.games)
+      .filter((game) => gameIds.includes(game.id))
   }
 }
 

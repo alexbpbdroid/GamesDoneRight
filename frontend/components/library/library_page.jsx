@@ -21,6 +21,7 @@ class LibraryPage extends React.Component {
     if (!this.props.games || !this.props.libraries) {
       return null;
     }
+
   }
 }
 
