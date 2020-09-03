@@ -7,6 +7,8 @@ import Modal from './modal/modal';
 import NavbarContainer from './navbar/navbar_container';
 import WishlistContainer from './wishlist/wishlist_container';
 import CartContainer from './cart/cart_container';
+import HistoryContainer from './history/history_container';
+import LibraryContainer from './library/library_container'
 
 // import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -21,6 +23,8 @@ const App = () => (
       <Route path="/games/:gameId" component={GamePage} />
       <Route path="/wishlists" component={WishlistContainer} />
       <Route path="/carts" component={CartContainer} />
+      <Route path="/histories" component={HistoryContainer} />
+      <Route path="/libraries" component={LibraryContainer} />
     </Switch>
     <GlobalFooter />
   </div>
