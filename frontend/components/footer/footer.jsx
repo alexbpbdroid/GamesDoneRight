@@ -20,7 +20,7 @@ const GlobalFooter = () => (
 
     <div className='bottom-footer'>
       <div className="bottom-footer-content">
-        <div>© GDR sp. z o.o. All rights reserved. All trademarks and registered trademarks are the property of their respective owners.</div>
+        <div></div>
       </div>
     </div>
   </div>

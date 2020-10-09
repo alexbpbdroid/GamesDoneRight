@@ -152,8 +152,8 @@ class GamePage extends React.Component {
                 <hr/>
                 <br/>
                 <ul>
-                  <li>✔️<strong> DRM FREE.</strong> No activation or online connection required to play.</li>
-                  <li>✔️<strong> Safety and satisfaction.</strong> Stellar support 24/7 and full refunds up to 30 days.</li>
+                  <li>✔️<strong> DRM FREE.</strong> No online connection or activation is required to play.</li>
+                  <li>✔️<strong> Safety and satisfaction.</strong> We offer full refunds within 30 days if you're not satisfied.</li>
                 </ul>
                 <br/><br/><br/><br/>            
                 Game Details
